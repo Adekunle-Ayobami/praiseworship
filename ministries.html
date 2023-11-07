@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milestones attained</title>
+
+    <link rel="icon" href="northwest_petroleum.png" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="jquery/jquery-ui-themes-1.13.2/jquery-ui-themes-1.13.2/themes/blitzer/jquery-ui.min.css"
+    />
+
+    <script src="jquery/jquery-3.6.3.min.js"></script>
+
+    <script src="jquery/jquery-ui-1.13.2/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="fontawesome-free-5.15.3-web/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="bootstrap-4.6.2-dist/bootstrap-4.6.2-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <style>
+      body {
+        overflow-x: hidden;
+        font-size: 75.5%;
+        margin: 0;
+        padding: 0;
+        background: ghostwhite;
+      }
+
+      .second {
+        position: sticky;
+        top: -10px;
+      }
+
+      img:hover {
+        box-shadow: -0px -0px 20px lightgray;
+      }
+
+      #total {
+        background-image: url("resources/images/people.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        margin-top: 0px;
+        width: 100%;
+        height: 500px;
+        opacity: 0.9;
+        z-index: -1;
+      }
+
+      #for-vission {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .dropdown-content input[type="button"]:hover {
+        background-color: darkslategrey;
+        width: 200px;
+        height: 40px;
+      }
+
+      #cop {
+        position: relative;
+        display: inline-table;
+        margin-top: 14px;
+        width: 100vw;
+        z-index: 1;
+
+        padding-top: 1px;
+      }
+
+      #container {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        width: 80%;
+        grid-row-gap: 10px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 100px;
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+        overflow-x: hidden;
+        padding-top: 5px;
+        opacity: 0.7;
+        z-index: -1;
+      }
+
+      #container2 {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        width: 80%;
+        grid-row-gap: 10px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 10px;
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+        overflow-x: hidden;
+        padding-top: 5px;
+        opacity: 0.7;
+        z-index: -1;
+      }
+
+      p:hover {
+        zoom: 1;
+      }
+
+      #nav {
+        display: block;
+        width: 24%;
+        height: 1000vh;
+        background-color: white;
+        z-index: 1;
+        opacity: 1;
+        margin-left: 76%;
+        margin-top: -110px;
+        position: fixed;
+        top: -30;
+      }
+
+      #bot2:hover {
+        color: white;
+      }
+
+      input {
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+      }
+      input[type="submit"] {
+        border-radius: 10px;
+        border: none;
+        background-color: lavender;
+      }
+
+      #conta {
+        display: flex;
+        flex-direction: horizontal;
+        flex-flow: row;
+        flex-wrap: wrap;
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 10%;
+        column-gap: 20px;
+        row-gap: 20px;
+        margin-top: 40px;
+        background-color: white;
+      }
+      #fig:last-child {
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+      }
+
+      #fig {
+        box-shadow: -0px -0px 20px lightgray;
+        border: none;
+      }
+
+      #fig {
+        display: flex;
+        flex-direction: horizontal;
+        flex-flow: column;
+        flex-wrap: wrap;
+        width: 450px;
+        border-radius: 5px;
+        background-color: ghostwhite;
+        padding-left: 50px;
+        padding-right: -50px;
+        margin-left: 7px;
+      }
+
+      #note {
+        width: 30%;
+        margin-left: 35%;
+        margin-right: 35%;
+        margin-top: 190px;
+        opacity: 0.7;
+
+        height: 200px;
+      }
+
+      #bars {
+        z-index: 1;
+        opacity: 0.8;
+        position: absolute;
+        top: 2220px;
+        left: 700px;
+        height: 300px;
+        width: 500px;
+        background-color: rgb(56, 45, 16);
+        box-shadow: -0px -0px 20px lightgray;
+        border: none;
+        border-radius: 10px;
+        transition: all 1s ease-out;
+      }
+
+      #bars:hover {
+        box-shadow: -2px -2px 30px navy;
+        border: 1px solid gray;
+        transition: all 1s ease-out;
+        transform: rotate(0.5turn) rotate(1.5turn);
+      }
+
+      #hh {
+        -webkit-animation: 1.5s linear 0s 1 alternate move_eye;
+        animation: 10s linear infinite move_eye;
+      }
+
+      #footbars {
+        width: 100vw;
+        height: 300px;
+        background-color: #253131;
+        margin-top: 20px;
+      }
+
+      @keyframes move_eye {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    </style>
+
+    <script>
+      function showHideNav(sidenav) {
+        document.getElementById(sidenav);
+        if (sidenav.style.display == "block") {
+          sidenav.style.display = "none";
+        } else {
+          sidenav.style.display = "block";
+        }
+      }
+
+      function hidenav(sidenav) {
+        document.getElementById(sidenav);
+        if (sidenav.style.display == "block") {
+          sidenav.style.display = "none";
+        }
+      }
+
+      $(document).ready(function () {
+        $("#bot1").click(function () {
+          $("#nav").show(200);
+        });
+      });
+
+      $(document).ready(function () {
+        $("#nav #bot2").click(function () {
+          $("#nav").hide(1000);
+        });
+      });
+
+      $(document).ready(function () {
+        $("#accord").accordion({ collapsible: true });
+      });
+
+      $(document).ready(function () {
+        $("#show").click(function () {
+          $("#accord").show(500);
+        });
+        $("#hide").click(function () {
+          $("#accord").hide(500);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- Header and navigation for desktop view  -->
+
+    <div id="total">
+      <div
+        style="
+          margin-top: -20px;
+          width: 100%;
+          height: 50px;
+          background-color: black;
+          box-shaddow: -2px 50-px 2px red;
+          opacity: 0.8;
+        "
+      >
+        <center style="width: 400px; margin-left: 65%">
+          <div id="cop">
+            <a style="color: white" href="mailto:hello@infytel.ng"
+              >hello@gn128.ng
+              <span class="fa fa-envelope" style="color: goldenrod"></span>
+            </a>
+          </div>
+          <div id="cop">
+            <a style="color: white" href="tel:08124534489">
+              +234-81-2453-4489
+              <span class="fa fa-phone" style="color: goldenrod"></span>
+            </a>
+          </div>
+
+          <div id="cop">
+            <button
+              id="bot1"
+              title="view our ministers"
+              style="background-color: #2f4f4f; height: 28px"
+              onclick="showHideNav(nav);"
+            >
+              <h6 tooltiptext="view our ministers" style="color: white">
+                Menu
+                <span
+                  class="fa fa-bars"
+                  style="color: goldenrod; font-size: 17px"
+                ></span>
+              </h6>
+            </button>
+          </div>
+        </center>
+      </div>
+
+      <!-- Header and navigation for desktop view  -->
+
+      <div class="second">
+        <svg
+          style="
+            text-align: left;
+            background: black;
+            width: 100%;
+            margin-left: 0px;
+          "
+          width="9.5cm"
+          height="1.5cm"
+          viewbox="0 0 950 150"
+          xmlns:s="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <g align="left" style="padding-left: -20px; background: white">
+            <image
+              x="-1100px"
+              y="10px"
+              width="200"
+              height="150"
+              xlink:href="resources/images/hanlogo.png"
+            >
+              <animate
+                attributeName="width"
+                repeatCount="indefinite"
+                from="10"
+                to="300"
+                begin="1s"
+                dur="15s"
+                fill="freeze"
+              />
+            </image>
+
+            <!--text font-weight="bold" fill="white" style="width: 200px; margin-top: 200px">This is bold and red</text-->
+          </g>
+        </svg>
+        <center>
+          <div class="drop">
+            <a id="ab" class="dropb" href="home.html">Home </a>
+          </div>
+          <div class="drop">
+            <a id="ab" class="dropb" href="#">Who We Are </a>
+
+            <div class="dropdown-content">
+              <a href="Milestones.html">Ministers</a>
+              <a href="ministries.html">Ministeries</a>
+              <a href="statement-of-faith.html">Statement Of Faith</a>
+            </div>
+          </div>
+
+          <div class="drop">
+            <a id="ab" class="dropb" href="#">Events </a>
+          </div>
+
+          <div class="drop">
+            <a id="ab" class="dropb" href="#">Give</a>
+          </div>
+          <div class="drop">
+            <a id="ab" class="dropb" href="contactus.html">Contact Us</a>
+          </div>
+          <div class="drop">
+            <a id="ab" class="dropb" href="#">Media Center</a>
+          </div>
+          <div class="drop">
+            <a id="ab" class="dropb" href="#">Login</a>
+          </div>
+        </center>
+      </div>
+
+      <div id="note">
+        <h1
+          style="
+            text-shadow: 3px 4px 3px black;
+            color: blue;
+            font-weight: bolder;
+            text-align: center;
+          "
+        >
+          OUR MINISTRIES
+        </h1>
+        <p
+          style="
+            text-shadow: 2px 3px 2px black;
+            color: white;
+            text-align: center;
+            font-size: 17px;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+              'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          "
+        >
+          We believe everyone has a talent, a skill, an ability that can support
+          the body of Christ.
+        </p>
+      </div>
+
+      <div id="background">
+        <!--img src="resources/images/redeem1.jpg" width="100%" height="700px" /-->
+      </div>
+    </div>
+
+    <div id="conta">
+      <div id="fig">
+        <img
+          src="resources/images/grace2.webp"
+          style="
+            border-radius: 5px;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 2%;
+            box-shadow: -0px -0px 20px lightgray;
+          "
+          width="80%"
+          height="190px"
+        />
+        <div id="figcap" style="padding: 15px">
+          <span>
+            <img src="resources/images/img1.jpg" height="50px" width="50px" />
+            <h4 style="color: navy">Awesome Grace</h4>
+          </span>
+          <p style="font-size: 14px">
+            Worship in music- psalms, hymns and spiritual songs
+          </p>
+          <p style="font-size: 14px; font-weight: bold; color: cadetblue">
+            Our heart is what God seeks
+          </p>
+        </div>
+      </div>
+
+      <div id="fig">
+        <img
+          src="resources/images/cornrrstone1.jpg"
+          style="
+            border-radius: 5px;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 2%;
+          "
+          width="80%"
+          height="190px"
+        />
+        <div id="figcap" style="padding: 15px">
+          <span>
+            <img src="resources/images/img2.jpg" height="50px" width="50px" />
+            <h4 style="color: navy">ConnerStone Church</h4>
+          </span>
+          <p style="font-size: 14px">
+            Worship in music- psalms, hymns and spiritual songs
+          </p>
+          <p style="font-size: 14px; font-weight: bold; color: cadetblue">
+            Our heart is what God seeks
+          </p>
+        </div>
+      </div>
+
+      <div id="fig">
+        <img
+          src="resources/images/nugen.jpeg"
+          style="
+            border-radius: 5px;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 2%;
+          "
+          width="80%"
+          height="190px"
+        />
+        <div id="figcap" style="padding: 15px">
+          <span>
+            <img src="resources/images/img3.jpg" height="50px" width="50px" />
+            <h4 style="color: navy">NUGEN - Youth Church</h4>
+          </span>
+          <p style="font-size: 14px">
+            Worship in music- psalms, hymns and spiritual songs
+          </p>
+          <p style="font-size: 14px; font-weight: bold; color: cadetblue">
+            Our heart is what God seeks
+          </p>
+        </div>
+      </div>
+
+      <div id="fig">
+        <img
+          src="resources/images/hospitality2.jpg"
+          style="
+            border-radius: 5px;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 2%;
+          "
+          width="80%"
+          height="190px"
+        />
+        <div id="figcap" style="padding: 15px">
+          <span>
+            <img src="resources/images/SUWED.jpg" height="50px" width="50px" />
+            <h4 style="color: navy">Hospitality / Welcome Team</h4>
+          </span>
+          <p style="font-size: 14px">
+            Worship in music- psalms, hymns and spiritual songs
+          </p>
+          <p style="font-size: 14px; font-weight: bold; color: cadetblue">
+            Our heart is what God seeks
+          </p>
+        </div>
+      </div>
+
+      <div id="fig">
+        <img
+          src="resources/images/praisemedia.jfif"
+          style="
+            border-radius: 5px;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 2%;
+          "
+          width="80%"
+          height="190px"
+        />
+        <div id="figcap" style="padding: 15px">
+          <span>
+            <img src="" height="50px" width="50px" />
+            <h4 style="color: navy">Praise Media</h4>
+          </span>
+          <p style="font-size: 14px">
+            Worship in music- psalms, hymns and spiritual songs
+          </p>
+          <p style="font-size: 14px; font-weight: bold; color: cadetblue">
+            Our heart is what God seeks
+          </p>
+        </div>
+      </div>
+
+      <div id="fig">
+        <img
+          src="resources/images/juniorchurch3.jfif"
+          style="
+            border-radius: 5px;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 2%;
+            box-shadow: -0px -0px 20px lightgray;
+          "
+          width="80%"
+          height="190px"
+        />
+        <div id="figcap" style="padding: 15px">
+          <span>
+            <img src="resources/images/img1.jpg" height="50px" width="50px" />
+            <h4 style="color: navy">Junior Church 3+</h4>
+          </span>
+          <p style="font-size: 14px">
+            Worship in music- psalms, hymns and spiritual songs
+          </p>
+          <p style="font-size: 14px; font-weight: bold; color: cadetblue">
+            Our heart is what God seeks
+          </p>
+        </div>
+      </div>
+
+      <div id="fig">
+        <img
+          src="resources/images/men and women.jfif"
+          style="
+            border-radius: 5px;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 2%;
+          "
+          width="80%"
+          height="190px"
+        />
+        <div id="figcap" style="padding: 15px">
+          <span>
+            <img src="resources/images/img2.jpg" height="50px" width="50px" />
+            <h4 style="color: navy">Men & Women Fellowship</h4>
+          </span>
+          <p style="font-size: 14px">
+            Worship in music- psalms, hymns and spiritual songs
+          </p>
+          <p style="font-size: 14px; font-weight: bold; color: cadetblue">
+            Our heart is what God seeks
+          </p>
+        </div>
+      </div>
+
+      <div id="fig">
+        <img
+          src="resources/images/eldersfellowship.jfif"
+          style="
+            border-radius: 5px;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 2%;
+          "
+          width="80%"
+          height="190px"
+        />
+        <div id="figcap" style="padding: 15px">
+          <span>
+            <img src="resources/images/img3.jpg" height="50px" width="50px" />
+            <h4 style="color: navy">Elders Fellowship</h4>
+          </span>
+          <p style="font-size: 14px">
+            Worship in music- psalms, hymns and spiritual songs
+          </p>
+          <p style="font-size: 14px; font-weight: bold; color: cadetblue">
+            Our heart is what God seeks
+          </p>
+        </div>
+      </div>
+
+      <div id="fig">
+        <img
+          src="resources/images/christiantraining3.jfif"
+          style="
+            border-radius: 5px;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 2%;
+          "
+          width="80%"
+          height="190px"
+        />
+        <div id="figcap" style="padding: 15px">
+          <span>
+            <img src="resources/images/SUWED.jpg" height="50px" width="50px" />
+            <h4 style="color: navy">Training</h4>
+          </span>
+          <p style="font-size: 14px">
+            Worship in music- psalms, hymns and spiritual songs
+          </p>
+          <p style="font-size: 14px; font-weight: bold; color: cadetblue">
+            Our heart is what God seeks
+          </p>
+        </div>
+      </div>
+
+      <div id="fig">
+        <img
+          src="resources/images/sundayschool.jfif"
+          style="
+            border-radius: 5px;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 2%;
+          "
+          width="80%"
+          height="190px"
+        />
+        <div id="figcap" style="padding: 15px">
+          <span>
+            <img src="resources/images/img3.jpg" height="50px" width="50px" />
+            <h4 style="color: navy">Sunday School</h4>
+          </span>
+          <p style="font-size: 14px">
+            Worship in music- psalms, hymns and spiritual songs
+          </p>
+          <p style="font-size: 14px; font-weight: bold; color: cadetblue">
+            Our heart is what God seeks
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="bars">
+      <h6
+        id="hh"
+        style="
+          color: white;
+          padding-top: 20px;
+          width: 35%;
+          margin-left: 35%;
+          margin-right: 30%;
+        "
+      >
+        place video ADs here
+      </h6>
+
+      <!--video src="resources/videos/backvid2.mp4" width="100%" controls height="100%" ></video-->
+    </div>
+
+    <div id="footbars"></div>
+    <div
+      style="
+        width: 100%;
+        height: 35px;
+        background-color: lightgray;
+        opacity: 0.6;
+      "
+    ></div>
+  </body>
+</html>
