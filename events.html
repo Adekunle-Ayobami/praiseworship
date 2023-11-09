@@ -82,6 +82,7 @@
         position: relative;
         display: inline-table;
         margin-top: 14px;
+        left: 40%;
         width: 100vw;
         z-index: 1;
 
@@ -89,24 +90,37 @@
       }
 
       #container {
-        display: grid;
-        grid-template-columns: 2fr 2fr;
+        /* display: grid;
+        grid-template-columns: 2fr 2fr; */
+        display: flex;
+        flex-direction: column;
         width: 96%;
         grid-row-gap: 5px;
         margin-left: 2%;
         margin-right: 2%;
-        margin-top: 20px;
+        margin-top: 30px;
         grid-column-gap: 5px;
         grid-row-gap: 5px;
         padding-top: 5px;
         opacity: 1;
         z-index: -1;
         height: auto;
+        gap: 50px;
       }
-
+      .outer-container {
+        display: flex;
+        gap: 20%;
+      }
+      .child-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+      }
       #child {
-        width: 650px;
-        height: 400px;
+        width: 500px;
+        height: 350px;
       }
 
       #nav {
@@ -247,6 +261,8 @@
         height: 42vh;
         display: flex;
         justify-content: space-around;
+        border-top-left-radius: 32px;
+        border-top-right-radius: 32px;
       }
       .footer img {
         width: 8vw;
@@ -306,7 +322,7 @@
         "
       >
         <center style="width: 400px; margin-left: 65%">
-          <div id="cop">
+          <!-- <div id="cop">
             <a style="color: white" href="https://wa.me/23408071996425">
               whatsapp
               <span class="fa fa-envelope" style="color: goldenrod"></span>
@@ -324,7 +340,7 @@
               +234-81-2453-4489
               <span class="fa fa-phone" style="color: goldenrod"></span>
             </a>
-          </div>
+          </div> -->
 
           <div id="cop">
             <button
@@ -391,7 +407,7 @@
           </div>
 
           <div class="drop">
-            <a id="ab" class="dropb" href="#">Events </a>
+            <a id="ab" class="dropb" href="./events.html">Events </a>
           </div>
 
           <div class="drop">
@@ -404,7 +420,7 @@
             <a id="ab" class="dropb" href="#">Media Center</a>
           </div>
           <div class="drop">
-            <a id="ab" class="dropb" href="#">Login</a>
+            <a id="ab" class="dropb" href="./login.html">Login</a>
           </div>
         </center>
       </div>
@@ -436,77 +452,81 @@
       </div>
 
       <div id="container">
-        <div id="child" style="height: 400px">
-          <img
-            src="resources/images/image2.jpg"
-            style="border-radius: 10px"
-            width="600px"
-            height="400px"
-          />
-        </div>
-        <div id="child" style="height: 400px">
-          <h2 style="color: navy; text-align: center; font-weight: bold">
-            OUR MISSION
-          </h2>
-          <h6 style="color: #8b4513; text-align: center; font-weight: bold">
-            PROCLAIMING JESUS, MATURING BELEIVERS
-          </h6>
-          <p
-            style="
-              opacity: 1;
-              font-size: 18px;
-              color: black;
-              padding: 20px;
-              margin-top: -20px;
-            "
-          >
-            Praise Tabernacle is a place where people of all races, cultures,
-            and gender find love, hope, and fulfilment in Christ Jesus and
-            attain their God-ordained destiny. The Church has a great focus on
-            prayer, worship and seeking the truth that is in the Word of God.
-            Praise Tabernacle exists to release the gift that God has placed
-            within you and unfold the specific plan He has for your life. This
-            church is a place where you will grow, a place where you will be
-            engaged, enthused and empowered to overcome life circumstances.
-          </p>
+        <div class="outer-container">
+          <div id="child" style="height: 400px">
+            <img
+              src="resources/images/image2.jpg"
+              style="border-radius: 10px"
+              width="600px"
+              height="400px"
+            />
+          </div>
+          <div id="child" style="height: 400px">
+            <h2 style="color: navy; text-align: center; font-weight: bold">
+              OUR MISSION
+            </h2>
+            <h6 style="color: #8b4513; text-align: center; font-weight: bold">
+              PROCLAIMING JESUS, MATURING BELEIVERS
+            </h6>
+            <p
+              style="
+                opacity: 1;
+                font-size: 18px;
+                color: black;
+                padding: 20px;
+                margin-top: -20px;
+              "
+            >
+              Praise Tabernacle is a place where people of all races, cultures,
+              and gender find love, hope, and fulfilment in Christ Jesus and
+              attain their God-ordained destiny. The Church has a great focus on
+              prayer, worship and seeking the truth that is in the Word of God.
+              Praise Tabernacle exists to release the gift that God has placed
+              within you and unfold the specific plan He has for your life. This
+              church is a place where you will grow, a place where you will be
+              engaged, enthused and empowered to overcome life circumstances.
+            </p>
+          </div>
         </div>
 
-        <div id="child" class="main-service">
-          <div>
-            <i class="fa-regular fa-calendar-days fa-2xl"></i>
-            <h3>MAIN SERVICES</h3>
+        <div class="child-container">
+          <div id="child" class="main-service">
+            <div>
+              <i class="fa-regular fa-calendar-days fa-2xl"></i>
+              <h3>MAIN SERVICES</h3>
+            </div>
+            <div style="margin-bottom: 2%">
+              <h5>SUNDAY SERVICE</h5>
+              <span>10:15am Live on Youtube</span>
+            </div>
+            <div style="margin-bottom: 2%">
+              <h5>WEDS SERVICE</h5>
+              <span>7:30pm</span>
+            </div>
+            <div>
+              <h5>FRIDAY PRAYERS</h5>
+              <span>7:30pm</span>
+            </div>
           </div>
-          <div style="margin-bottom: 2%">
-            <h5>SUNDAY SERVICE</h5>
-            <span>10:15am Live on Youtube</span>
-          </div>
-          <div style="margin-bottom: 2%">
-            <h5>WEDS SERVICE</h5>
-            <span>7:30pm</span>
-          </div>
-          <div>
-            <h5>FRIDAY PRAYERS</h5>
-            <span>7:30pm</span>
-          </div>
-        </div>
-        <div id="child" class="weekly-prayer">
-          <div>
-            <i class="fa-solid fa-fire fa-2xl"></i>
-            <h4>WEEKLY PRAYERS</h4>
-          </div>
-          <div style="margin-bottom: 3%">
-            <h5>MORNING PRAYERS</h5>
-            <span
-              >6 - 6:30am MON - FRI <br />
-              on Prayerline</span
-            >
-          </div>
-          <div>
-            <h5>LUNCHTIME PRAYERS</h5>
-            <span
-              >1 - 1:30am MON - FRI <br />
-              on Prayerline</span
-            >
+          <div id="child" class="weekly-prayer">
+            <div>
+              <i class="fa-solid fa-fire fa-2xl"></i>
+              <h4>WEEKLY PRAYERS</h4>
+            </div>
+            <div style="margin-bottom: 3%">
+              <h5>MORNING PRAYERS</h5>
+              <span
+                >6 - 6:30am MON - FRI <br />
+                on Prayerline</span
+              >
+            </div>
+            <div>
+              <h5>LUNCHTIME PRAYERS</h5>
+              <span
+                >1 - 1:30am MON - FRI <br />
+                on Prayerline</span
+              >
+            </div>
           </div>
         </div>
       </div>
