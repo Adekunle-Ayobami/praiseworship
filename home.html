@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="resources/images/hanlogo.png" />
+    <!-- <link rel="icon" href="resources/images/hanlogo.png" /> -->
     <title>Praise Tabanacle | proclaiming Jesus and Maturing Beleivers</title>
 
     <link
@@ -27,6 +27,14 @@
       href="bootstrap-4.6.2-dist/bootstrap-4.6.2-dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="resources/images/ptlogo.webp" type="image/png" />
 
     <style>
       body {
@@ -39,6 +47,7 @@
       .second {
         position: sticky;
         top: -10px;
+        height: 13vh;
       }
 
       .background-video {
@@ -152,8 +161,59 @@
       }
 
       .second:hover {
-        opacity: 0.4;
+        /* opacity: 0.4; */
         background-color: black;
+      }
+
+      /* Footer */
+      .footer {
+        padding: 30px 30px 60px 30px;
+        background-color: lightgray;
+        margin-top: -30%;
+        height: 42vh;
+        display: flex;
+        justify-content: space-around;
+      }
+      .footer img {
+        width: 8vw;
+        margin-bottom: 2%;
+      }
+      .footer-logo {
+        display: flex;
+        flex-direction: column;
+      }
+      .footer-logo p {
+        width: 11vw;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .footer-logo span {
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .footer-contact p {
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .footer-icons i {
+        color: black;
+      }
+      .footer-contact a {
+        font-size: 17px;
+        font-weight: 600;
+        color: blue;
+      }
+      .footer-contact div {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 5%;
+      }
+      .footer-church ul {
+        list-style-type: none;
+      }
+      .footer-church li {
+        font-size: 17px;
+        font-weight: 600;
       }
     </style>
 
@@ -212,11 +272,17 @@
       "
     >
       <center style="width: 400px; margin-left: 65%">
-        <div id="cop">
+        <!-- <div id="cop">
           <a
-            style="color: white; font-size: 12px; opacity: 1"
+            style="
+              color: white;
+              font-size: 12px;
+              opacity: 1;
+              display: flex;
+              gap: 10px;
+            "
             href="mailto:hello@infytel.ng"
-            >hello@gn128.ng
+            >admin@praisetabernacle.org.uk
             <span class="fa fa-envelope" style="color: goldenrod"></span>
           </a>
         </div>
@@ -228,7 +294,7 @@
             +234-81-2453-4489
             <span class="fa fa-phone" style="color: goldenrod"></span>
           </a>
-        </div>
+        </div> -->
 
         <div id="cop">
           <button
@@ -288,14 +354,14 @@
 
           <div class="dropdown-content">
             <!--input type="button" value="Ministers" onclick="showHideNav(nav); event.setPropagation();" style="border: none; color: black; background-color: white; height: 40px; width: 200px;" /-->
-            <a href="Milestones.html">Ministers</a>
+            <!-- <a href="Milestones.html">Ministers</a> -->
             <a href="ministries.html">Ministeries</a>
             <a href="statement-of-faith.html">Statement Of Faith</a>
           </div>
         </div>
 
         <div class="drop">
-          <a id="ab" class="dropb" href="#">Events </a>
+          <a id="ab" class="dropb" href="./events.html">Events </a>
         </div>
 
         <div class="drop">
@@ -308,7 +374,7 @@
           <a id="ab" class="dropb" href="#">Media Center</a>
         </div>
         <div class="drop">
-          <a id="ab" class="dropb" href="#">Login</a>
+          <a id="ab" class="dropb" href="./login.html">Login</a>
         </div>
       </center>
     </div>
@@ -487,7 +553,11 @@
     <div id="textcontent">
       <h1
         id="hc"
-        style="text-shadow: 2px 3px 2px darkslateblue; font-weight: bold"
+        style="
+          text-shadow: 2px 3px 2px darkslateblue;
+          font-weight: bold;
+          width: 150%;
+        "
       >
         Join a fellowship with the mission of proclaiming Jesus and maturing
         believers
@@ -595,5 +665,52 @@
         opacity: 0.6;
       "
     ></div>
+
+    <footer class="footer">
+      <div class="footer-logo">
+        <div>
+          <img src="./resources/images/ptlogo.webp" alt="" />
+        </div>
+        <div>
+          <p>
+            RCCG Praise Tabernacle is registered with the UK Charities
+            Commission
+          </p>
+          <span>Charity Number 1085725</span>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <h5>CONTACT US</h5>
+        <p>1 Marsh Road Wembly HA0 1ES</p>
+        <a href="ayobamisamuel58@gmail.com">Email Admin</a>
+        <div>+44 20 8991 6733</div>
+        <div class="footer-icons">
+          <a href="https://www.facebook.com/praisetabs"
+            ><i class="fa-brands fa-facebook fa-2xl"></i
+          ></a>
+          <a href="https://www.instagram.com/praisetabs">
+            <i class="fa-brands fa-instagram fa-2xl"></i
+          ></a>
+          <a href="https://twitter.com/praisetabs"
+            ><i class="fa-brands fa-x-twitter fa-2xl"></i
+          ></a>
+          <a href="https://www.youtube.com/channel/UCWPTM41eDRTfNU1SnCbZBJw"
+            ><i class="fa-brands fa-youtube fa-2xl"></i
+          ></a>
+        </div>
+      </div>
+      <div class="footer-church">
+        <ul>
+          <li>The Church</li>
+          <li>Ministers</li>
+          <li>Ministries</li>
+          <li>Our Beliefs</li>
+          <li>Media Centre</li>
+          <li>Sermons</li>
+          <li>Blog</li>
+          <li>Resourses</li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

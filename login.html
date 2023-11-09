@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="resources/images/hanlogo.png" />
+    <title>Praise Tabanacle | proclaiming Jesus and Maturing Beleivers</title>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="jquery/jquery-ui-themes-1.13.2/jquery-ui-themes-1.13.2/themes/smoothness/jquery-ui.min.css"
+    />
+
+    <script src="jquery/jquery-3.6.3.min.js"></script>
+
+    <script src="jquery/jquery-ui-1.13.2/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="fontawesome-free-5.15.3-web/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="bootstrap-4.6.2-dist/bootstrap-4.6.2-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="./login.html" />
+
+    <style>
+      body {
+        overflow-x: hidden;
+        /* font-size: 25.5%; */
+        margin: 0;
+        padding: 0;
+      }
+
+      .second {
+        position: sticky;
+        top: -10px;
+      }
+
+      .background-video {
+        margin-top: 0px;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 80;
+        bottom: 0;
+        opacity: 1;
+        z-index: -1;
+      }
+
+      #for-vission {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .dropdown-content input[type="button"]:hover {
+        background-color: darkslategrey;
+        width: 200px;
+        height: 40px;
+      }
+
+      #cop {
+        position: relative;
+        display: inline-table;
+        margin-top: 14px;
+        width: 100vw;
+        z-index: 1;
+        padding-top: 1px;
+        opacity: 1;
+      }
+      body #firstdiv:hover {
+        opacity: 1;
+        background-color: black;
+      }
+
+      #container {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        width: 80%;
+        grid-row-gap: 10px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 100px;
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+        overflow-x: hidden;
+        padding-top: 5px;
+        opacity: 0.7;
+        z-index: -1;
+      }
+
+      #container2 {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        width: 80%;
+        grid-row-gap: 10px;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 10px;
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+        overflow-x: hidden;
+        padding-top: 5px;
+        opacity: 0.7;
+        z-index: -1;
+      }
+
+      p:hover {
+        zoom: 1;
+      }
+
+      #nav {
+        display: block;
+        width: 30%;
+        height: 100vh;
+        background-color: white;
+        z-index: 1;
+        opacity: 1;
+        margin-left: 68%;
+        margin-right: 2%;
+        margin-top: 1px;
+        position: fixed;
+        top: -30;
+      }
+
+      #bot2:hover {
+        color: white;
+      }
+
+      input {
+        width: 150px;
+        height: 40px;
+        border-radius: 5px;
+      }
+      input[type="submit"] {
+        border-radius: 10px;
+        border: none;
+        background-color: lavender;
+      }
+
+      #footbars {
+        width: 100vw;
+        height: 300px;
+        background-color: #253131;
+        margin-top: 20px;
+      }
+
+      .second:hover {
+        opacity: 0.4;
+        background-color: black;
+      }
+      .login-form form {
+        margin-top: 8%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+      }
+      .login-mail {
+        display: flex;
+        flex-direction: column;
+      }
+      .login-password label {
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .login-mail label {
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .login-mail input {
+        padding: 5%;
+        width: 40vw;
+      }
+      .login-password input {
+        padding: 5%;
+        width: 40vw;
+      }
+      .login-password {
+        display: flex;
+        flex-direction: column;
+      }
+      .login-check {
+        display: flex;
+        gap: 2%;
+        width: 30%;
+        margin-left: -10%;
+      }
+      .login-check div {
+        margin-top: 7px;
+      }
+      .login-check input {
+        width: 20px;
+        cursor: pointer;
+      }
+      .btn1 {
+        background-color: black;
+        padding: 15%;
+        width: 6vw;
+        color: white;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        border-radius: 12px;
+      }
+      .btn1:hover {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+      }
+    </style>
+
+    <script>
+      function showHideNav(sidenav) {
+        document.getElementById(sidenav);
+        if (sidenav.style.display == "block") {
+          sidenav.style.display = "none";
+        } else {
+          sidenav.style.display = "block";
+        }
+      }
+
+      function hidenav(sidenav) {
+        document.getElementById(sidenav);
+        if (sidenav.style.display == "block") {
+          sidenav.style.display = "none";
+        }
+      }
+
+      $(document).ready(function () {
+        $("#bot1").click(function () {
+          $("#nav").show(200);
+        });
+      });
+
+      $(document).ready(function () {
+        $("#nav #bot2").click(function () {
+          $("#nav").hide(1000);
+        });
+      });
+
+      $(document).ready(function () {
+        $("#accord").accordion({ collapsible: true });
+      });
+
+      $(document).ready(function () {
+        $("#show").click(function () {
+          $("#accord").show(500);
+        });
+        $("#hide").click(function () {
+          $("#accord").hide(500);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div
+      id="firstdiv"
+      style="
+        background-color: black;
+        width: 100%;
+        opacity: 1;
+        height: 50px;
+        margin-top: -20px;
+      "
+    >
+      <center style="width: 400px; margin-left: 65%">
+        <div id="cop">
+          <a
+            style="color: white; font-size: 12px; opacity: 1"
+            href="mailto:hello@infytel.ng"
+            >hello@gn128.ng
+            <span class="fa fa-envelope" style="color: goldenrod"></span>
+          </a>
+        </div>
+        <div id="cop">
+          <a
+            style="color: white; font-size: 12px; opacity: 1"
+            href="tel:08124534489"
+          >
+            +234-81-2453-4489
+            <span class="fa fa-phone" style="color: goldenrod"></span>
+          </a>
+        </div>
+
+        <div id="cop">
+          <button
+            id="bot1"
+            title="view our ministers"
+            style="background-color: #2f4f4f; height: 28px"
+            onclick="showHideNav(nav);"
+          >
+            <h6 tooltiptext="view our ministers" style="color: white">
+              Menu
+              <span
+                class="fa fa-bars"
+                style="color: goldenrod; font-size: 17px"
+              ></span>
+            </h6>
+          </button>
+        </div>
+      </center>
+    </div>
+
+    <!-- Header and navigation for desktop view  -->
+
+    <div class="second">
+      <svg
+        style="
+          text-align: left;
+          background: black;
+          width: 100%;
+          padding-left: 20px;
+        "
+        width="9.5cm"
+        height="2.0cm"
+        viewbox="0 0 950 200"
+        xmlns:s="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <g align="left" style="padding-left: -20px; background: white">
+          <image
+            x="-1300px"
+            y="-1px"
+            width="200"
+            height="200"
+            xlink:href="resources/images/ptlogo.webp"
+          >
+            <!--animate attributeName="width" repeatCount="indefinite" from="10" to="300" begin="1s" dur="15s" fill="freeze" /-->
+          </image>
+
+          <!--text font-weight="bold" fill="white" style="width: 200px; margin-top: 200px">This is bold and red</text-->
+        </g>
+      </svg>
+      <center>
+        <div class="drop">
+          <a id="ab" class="dropb" href="home.html">Home </a>
+        </div>
+        <div class="drop">
+          <a id="ab" class="dropb" href="#">Who We Are </a>
+
+          <div class="dropdown-content">
+            <!--input type="button" value="Ministers" onclick="showHideNav(nav); event.setPropagation();" style="border: none; color: black; background-color: white; height: 40px; width: 200px;" /-->
+            <a href="Milestones.html">Ministers</a>
+            <a href="ministries.html">Ministeries</a>
+            <a href="statement-of-faith.html">Statement Of Faith</a>
+          </div>
+        </div>
+
+        <div class="drop">
+          <a id="ab" class="dropb" href="./events.html">Events </a>
+        </div>
+
+        <div class="drop">
+          <a id="ab" class="dropb" href="#">Give</a>
+        </div>
+        <div class="drop">
+          <a id="ab" class="dropb" href="contactus.html">Contact Us</a>
+        </div>
+        <div class="drop">
+          <a id="ab" class="dropb" href="#">Media Center</a>
+        </div>
+        <div class="drop">
+          <a id="ab" class="dropb" href="#">Login</a>
+        </div>
+      </center>
+    </div>
+
+    <div class="login-form">
+      <form action="">
+        <div class="login-mail">
+          <label for="">Email Address</label>
+          <input type="text" placeholder="Enter email address" />
+        </div>
+        <div class="login-password">
+          <label for="">Password</label>
+          <input type="text" placeholder="Enter your password" />
+        </div>
+        <div class="login-check">
+          <input type="checkbox" />
+          <div>Remember me</div>
+        </div>
+        <div class="signup">
+          Not a member yet? <a href="./signup.html">Sign Up.</a>
+        </div>
+        <div class="btn-div">
+          <button class="btn1">LOGIN</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
