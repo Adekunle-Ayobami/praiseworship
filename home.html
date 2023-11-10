@@ -47,7 +47,8 @@
       .second {
         position: sticky;
         top: -10px;
-        height: 13vh;
+        /* height: 13vh; */
+        opacity: 0.5;
       }
 
       .background-video {
@@ -96,7 +97,7 @@
         grid-row-gap: 10px;
         margin-left: 10%;
         margin-right: 10%;
-        margin-top: 100px;
+        margin-top: 20%;
         grid-column-gap: 30px;
         grid-row-gap: 30px;
         overflow-x: hidden;
@@ -221,6 +222,18 @@
         font-size: 17px;
         font-weight: 600;
       }
+      .footer-copyright div {
+        font-size: 17px;
+        font-weight: 600;
+        width: 20vw;
+      }
+      .scroll-arrow {
+        position: absolute;
+        top: 90%;
+        left: 40%;
+        display: block;
+        background-color: none;
+      }
     </style>
 
     <script>
@@ -264,6 +277,20 @@
           $("#accord").hide(500);
         });
       });
+
+      function scrollDown() {
+        // You can adjust the value (e.g., 500) based on how much you want the page to scroll down
+        const scrollAmount = 1000;
+
+        // Scroll down smoothly
+        window.scrollBy({
+          top: scrollAmount,
+          behavior: "smooth",
+        });
+
+        // // Hide the button after it's clicked
+        // document.getElementById("scrollDownBtn").style.display = "none";
+      }
     </script>
   </head>
   <body>
@@ -272,7 +299,7 @@
       style="
         background-color: black;
         width: 100%;
-        opacity: 1;
+        opacity: 0.5;
         height: 50px;
         margin-top: -20px;
       "
@@ -595,7 +622,9 @@
           you! God bless. Pastor Femi
 
           <br /><br />
-          <input type="button" class="btn-success btn-small" value="Events" />
+          <a href="./events.html"
+            ><input type="button" class="btn-success btn-small" value="Events"
+          /></a>
         </p>
       </div>
       <div
@@ -688,7 +717,7 @@
       <div class="footer-contact">
         <h5>CONTACT US</h5>
         <p>1 Marsh Road Wembly HA0 1ES</p>
-        <a href="mailto:ayobamisamuel58@gmail.com">Email Admin</a>
+        <a href="mailto:admin@praisetabernacle.org.uk">Email Admin</a>
         <div>+44 20 8991 6733</div>
         <div class="footer-icons">
           <a href="https://www.facebook.com/praisetabs"
@@ -717,6 +746,18 @@
           <li>Resourses</li>
         </ul>
       </div>
+      <div class="footer-copyright">
+        <div>Redesigned by Hans Technology</div>
+        <div>Copyright &#169; 2023 RCCG Praise Tabernacle London &reg;</div>
+      </div>
     </footer>
+
+    <button class="scroll-arrow" id="scrollDownBtn" onclick="scrollDown()">
+      <img
+        width="40vw"
+        src="resources/images/chevron-down1.svg"
+        alt="Arrow Down"
+      />
+    </button>
   </body>
 </html>

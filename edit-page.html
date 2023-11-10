@@ -174,9 +174,6 @@
         align-items: center;
         gap: 1em;
       }
-      .login-form a {
-        text-decoration: none;
-      }
       .login-mail {
         display: flex;
         flex-direction: column;
@@ -218,7 +215,7 @@
       .btn1 {
         background-color: black;
         padding: 15%;
-        width: 5vw;
+        width: 6vw;
         color: white;
         border: none;
         cursor: pointer;
@@ -229,6 +226,68 @@
         background-color: white;
         color: black;
         border: 1px solid black;
+      }
+      .edit-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10% 3% 10%;
+        gap: 5%;
+        background-color: #fff;
+        padding: 20px 0px 20px 150px;
+        border-radius: 32px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      .inner-edit {
+        display: flex;
+        gap: 13%;
+      }
+      .edit-logo {
+        background-color: #005696;
+        color: #fff;
+        border-radius: 50%;
+        padding: 4%;
+        font-size: 70px;
+      }
+      .edit1 {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+      }
+      .edit1 span {
+        color: #091e42;
+        font-size: 13px;
+      }
+      .edit1 div {
+        font-size: 19px;
+        color: #091e42;
+      }
+      .edit2 {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+      }
+      .edit2 span {
+        color: #091e42;
+        font-size: 13px;
+      }
+      .edit2 div {
+        font-size: 19px;
+        color: #091e42;
+      }
+      .edit3 {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+      }
+      .edit3 span {
+        color: #091e42;
+        font-size: 13px;
+      }
+      .edit3 div {
+        font-size: 19px;
+        color: #091e42;
       }
     </style>
 
@@ -388,29 +447,48 @@
       </center>
     </div>
 
-    <div class="login-form">
-      <form action="">
-        <div class="login-mail">
-          <label for="">Email Address</label>
-          <input type="text" placeholder="Enter email address" />
+    <div class="edit-container">
+      <div class="edit-logo">DS</div>
+      <div style="width: 100%">
+        <div style="display: flex; gap: 56%">
+          <h4>Daniel & Sons Ltd.</h4>
+          <a href="./edit-information.html"
+            ><i class="fa-regular fa-pen-to-square fa-2xl"></i
+          ></a>
         </div>
-        <div class="login-password">
-          <label for="">Password</label>
-          <input type="text" placeholder="Enter your password" />
-        </div>
-        <div class="login-check">
-          <input type="checkbox" />
-          <div>Remember me</div>
-        </div>
-        <div class="signup">
-          Not a member yet? <a href="./signup.html">Sign Up.</a>
-        </div>
-        <a href="./edit-page.html">
-          <div class="btn-div">
-            <div class="btn1">LOGIN</div>
+        <div class="inner-edit">
+          <div class="edit1">
+            <div>
+              <span>COMPANY TYPE</span>
+              <div>Engineering Firm</div>
+            </div>
+            <div>
+              <span>EMAIL</span>
+              <div>sample@mail.com</div>
+            </div>
           </div>
-        </a>
-      </form>
+          <div class="edit2">
+            <div>
+              <span>PHYSICAL ADDRESS</span>
+              <div>No, 31, Unity Road, Ikeja</div>
+            </div>
+            <div>
+              <span>WEBSITE</span>
+              <div>info.edu.ng</div>
+            </div>
+          </div>
+          <div class="edit3">
+            <div>
+              <span>PHONE NUMBER</span>
+              <div>+234 876 467777</div>
+            </div>
+            <div>
+              <span>MOBILE NUMBER</span>
+              <div>01-8373910</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
