@@ -35,6 +35,10 @@
       referrerpolicy="no-referrer"
     />
     <link rel="icon" href="resources/images/ptlogo.webp" type="image/png" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
       body {
@@ -42,6 +46,7 @@
         font-size: 25.5%;
         margin: 0;
         padding: 0;
+        font-family: "Clash Grotesk";
       }
 
       .second {
@@ -75,6 +80,22 @@
         height: 40px;
       }
 
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-20px);
+        }
+        60% {
+          transform: translateY(-10px);
+        }
+      }
+
       #cop {
         position: relative;
         display: inline-table;
@@ -97,7 +118,7 @@
         grid-row-gap: 10px;
         margin-left: 10%;
         margin-right: 10%;
-        margin-top: 20%;
+        margin-top: 40%;
         grid-column-gap: 30px;
         grid-row-gap: 30px;
         overflow-x: hidden;
@@ -171,7 +192,7 @@
       .footer {
         padding: 30px 30px 60px 30px;
         background-color: lightgray;
-        margin-top: -30%;
+        margin-top: -110em;
         height: 42vh;
         display: flex;
         justify-content: space-around;
@@ -230,9 +251,48 @@
       .scroll-arrow {
         position: absolute;
         top: 90%;
-        left: 40%;
+        left: 51%;
+        transform: translateX(-50%);
         display: block;
-        background-color: none;
+        animation: bounce 2s infinite;
+        cursor: pointer;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      @media (max-width: 500px) {
+        .footer {
+          flex-direction: column;
+          height: 150vh;
+          text-align: center;
+          /* margin-top: -80%; */
+        }
+        .footer-logo img {
+          width: 150px;
+        }
+        .footer-logo p {
+          margin-left: 13%;
+          width: 70vw;
+          font-size: 20px;
+        }
+        .footer-logo span {
+          font-size: 17px;
+        }
+        .footer-contact p {
+          font-size: 17px;
+        }
+        .scroll-arrow {
+          display: none;
+        }
+        .footer-copyright div {
+          margin-left: 13%;
+          width: 70vw;
+          font-size: 20px;
+        }
+        .footer-church li {
+          display: flex;
+          margin-left: 35%;
+        }
       }
     </style>
 
@@ -280,17 +340,31 @@
 
       function scrollDown() {
         // You can adjust the value (e.g., 500) based on how much you want the page to scroll down
-        const scrollAmount = 1000;
+        const scrollAmount = 850;
 
         // Scroll down smoothly
         window.scrollBy({
           top: scrollAmount,
           behavior: "smooth",
         });
-
-        // // Hide the button after it's clicked
-        // document.getElementById("scrollDownBtn").style.display = "none";
       }
+
+      let lastScrollTop = 0;
+      const scrollArrow = document.getElementById("scrollDownBtn");
+
+      window.addEventListener("scroll", function () {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+          // Scrolling down
+          scrollArrow.style.opacity = "0";
+        } else {
+          // Scrolling up
+          scrollArrow.style.opacity = "1";
+        }
+
+        lastScrollTop = scrollTop;
+      });
     </script>
   </head>
   <body>
@@ -380,7 +454,7 @@
       </svg>
       <center>
         <div class="drop">
-          <a id="ab" class="dropb" href="home.html">Home </a>
+          <a id="ab" class="dropb" href="index.html">Home </a>
         </div>
         <div class="drop">
           <a id="ab" class="dropb" href="#">Who We Are </a>
@@ -588,8 +662,9 @@
         id="hc"
         style="
           text-shadow: 2px 3px 2px darkslateblue;
-          font-weight: bold;
           width: 150%;
+          font-size: 35px;
+          margin: 40% 10% 10% 20%;
         "
       >
         Join a fellowship with the mission of proclaiming Jesus and maturing
@@ -752,12 +827,13 @@
       </div>
     </footer>
 
-    <button class="scroll-arrow" id="scrollDownBtn" onclick="scrollDown()">
+    <div class="scroll-arrow" id="scrollDownBtn" onclick="scrollDown()">
       <img
-        width="40vw"
-        src="resources/images/chevron-down1.svg"
+        width="50vw"
+        height="70vh"
+        src="resources/images/white-down-arrow-png-2.png"
         alt="Arrow Down"
       />
-    </button>
+    </div>
   </body>
 </html>

@@ -47,6 +47,7 @@
       .second {
         position: sticky;
         top: -10px;
+        opacity: 0.5;
       }
 
       #background {
@@ -109,7 +110,7 @@
       .footer {
         padding: 30px 30px 60px 30px;
         background-color: lightgray;
-        margin-top: -95%;
+        margin-top: -108.5em;
         height: 42vh;
         display: flex;
         justify-content: space-around;
@@ -164,6 +165,40 @@
         font-size: 17px;
         font-weight: 600;
         width: 20vw;
+      }
+
+      @media (max-width: 500px) {
+        .footer {
+          flex-direction: column;
+          height: 150vh;
+          text-align: center;
+        }
+        .footer-logo img {
+          width: 150px;
+        }
+        .footer-logo p {
+          margin-left: 13%;
+          width: 70vw;
+          font-size: 20px;
+        }
+        .footer-logo span {
+          font-size: 17px;
+        }
+        .footer-contact p {
+          font-size: 17px;
+        }
+        .scroll-arrow {
+          display: none;
+        }
+        .footer-copyright div {
+          margin-left: 13%;
+          width: 70vw;
+          font-size: 20px;
+        }
+        .footer-church li {
+          display: flex;
+          margin-left: 35%;
+        }
       }
     </style>
 
@@ -360,7 +395,7 @@
         height: 50px;
         background-color: black;
         box-shadow: -2px 50-px 2px red;
-        opacity: 0.8;
+        opacity: 0.5;
       "
     >
       <center style="width: 400px; margin-left: 65%">
@@ -428,7 +463,7 @@
       </svg>
       <center>
         <div class="drop">
-          <a id="ab" class="dropb" href="home.html">Home </a>
+          <a id="ab" class="dropb" href="index.html">Home </a>
         </div>
         <div class="drop">
           <a id="ab" class="dropb" href="#">Who We Are </a>

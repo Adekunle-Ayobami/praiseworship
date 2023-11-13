@@ -57,7 +57,8 @@ body {
   margin-top: 100px;
   margin-left: 15%;
   margin-right: 45%;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
+  font-family: "Clash Grotesk";
 }
 
 #dione {
