@@ -205,8 +205,6 @@
         height: 42vh;
         display: flex;
         justify-content: space-around;
-        border-top-left-radius: 32px;
-        border-top-right-radius: 32px;
       }
       .footer img {
         width: 8vw;
@@ -346,20 +344,19 @@
           </div> -->
 
           <div id="cop">
-            <button
+            <div
               id="bot1"
               title="view our ministers"
-              style="background-color: #2f4f4f; height: 28px"
+              style="background-color: none; height: 38px; cursor: pointer"
               onclick="showHideNav(nav);"
             >
               <h6 tooltiptext="view our ministers" style="color: white">
-                Menu
                 <span
-                  class="fa fa-bars"
-                  style="color: goldenrod; font-size: 17px"
+                  class="fa fa-bars fa-2xl"
+                  style="color: goldenrod; font-size: 37px"
                 ></span>
               </h6>
-            </button>
+            </div>
           </div>
         </center>
       </div>
@@ -462,14 +459,7 @@
     <div id="contamain">
       <div id="contadiv" style="display: block; text-align: center">
         <h5 style="color: darkslateblue; text-align: center">Head Office</h5>
-        <h6
-          style="
-            text-align: left;
-            color: darkslateblue;
-            padding-left: 20px;
-            font-weight: bold;
-          "
-        >
+        <h6 style="color: darkslateblue; padding-left: 20px; font-weight: bold">
           Praise Tabernacle | proclaiming Jesus
         </h6>
         <p
@@ -479,14 +469,7 @@
         >
           1 Marsh Road Wembley HA0 1ES.
         </p>
-        <h6
-          style="
-            text-align: left;
-            color: darkslateblue;
-            padding-left: 20px;
-            font-weight: bold;
-          "
-        >
+        <h6 style="color: darkslateblue; padding-left: 20px; font-weight: bold">
           Tel / Mail / Fax:
         </h6>
         <br /><br />
@@ -494,15 +477,17 @@
           &nbsp; +44 2089916733
         </h6>
         <br />
-        <h6 class="fa fa-mail-bulk">admin@praisetabernacle.org.uk</h6>
+        <i class="fa fa-mail-bulk"></i>
+        <span style="font-size: 19px">admin@praisetabernacle.org.uk</span>
         <br />
-        <h6 class="fa fa-fax">Fax: 00 0000000</h6>
+        <i class="fa fa-fax"></i>
+        <span style="font-size: 19px">Fax: 00 0000000</span>
       </div>
       <div id="contadiv">
         <h5 style="color: darkslateblue; text-align: center">Trace Off</h5>
         <h6
           style="
-            text-align: left;
+            text-align: center;
             padding-left: 20px;
             color: darkslateblue;
             font-weight: bold;
@@ -520,7 +505,7 @@
         <h6
           style="
             color: darkslateblue;
-            text-align: left;
+            text-align: center;
             padding-left: 20px;
             font-weight: bold;
           "
@@ -544,7 +529,7 @@
         <br />
         <h6
           style="
-            text-align: left;
+            text-align: center;
             color: darkslateblue;
             padding-left: 20px;
             font-weight: bold;
@@ -559,7 +544,7 @@
           ></span
           >&nbsp;&nbsp; Via A40 / A406 Hangerlane Gyratory
         </h6>
-        <button>Get Direction</button>
+        <button style="margin-left: 24em">Get Direction</button>
       </div>
       <div id="contadiv" style="display: block; text-align: center">
         <h5
@@ -585,7 +570,7 @@
           </h6>
         </center>
         <br /><br />
-        <button style="float: left">Check Upcoming Events</button>
+        <button style="margin-right: 7em">Check Upcoming Events</button>
       </div>
 
       <div id="contadiv" style="display: block; text-align: center">

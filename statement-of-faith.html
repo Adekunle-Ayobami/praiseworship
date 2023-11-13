@@ -50,7 +50,7 @@
         opacity: 0.5;
       }
 
-      #background {
+      #total {
         background-image: url("resources/images/people4.jpg");
         background-position: center;
         background-repeat: no-repeat;
@@ -58,7 +58,7 @@
         background-attachment: fixed;
         margin-top: 0px;
         width: 100%;
-        height: 400px;
+        height: 600px;
         opacity: 0.9;
         z-index: -1;
       }
@@ -114,8 +114,6 @@
         height: 42vh;
         display: flex;
         justify-content: space-around;
-        border-top-left-radius: 32px;
-        border-top-right-radius: 32px;
       }
       .footer img {
         width: 8vw;
@@ -388,18 +386,19 @@
     </script>
   </head>
   <body>
-    <div
-      style="
-        margin-top: -20px;
-        width: 100%;
-        height: 50px;
-        background-color: black;
-        box-shadow: -2px 50-px 2px red;
-        opacity: 0.5;
-      "
-    >
-      <center style="width: 400px; margin-left: 65%">
-        <!-- <div id="cop">
+    <div id="total">
+      <div
+        style="
+          margin-top: -20px;
+          width: 100%;
+          height: 50px;
+          background-color: black;
+          box-shadow: -2px 50-px 2px red;
+          opacity: 0.5;
+        "
+      >
+        <center style="width: 400px; margin-left: 65%">
+          <!-- <div id="cop">
           <a style="color: white" href="mailto:hello@infytel.ng"
             >hello@gn128.ng
             <span class="fa fa-envelope" style="color: goldenrod"></span>
@@ -412,89 +411,89 @@
           </a>
         </div> -->
 
-        <div id="cop">
-          <button
-            id="bot1"
-            title="view our ministers"
-            style="background-color: #2f4f4f; height: 28px"
-            onclick="showHideNav(nav);"
-          >
-            <h6 tooltiptext="view our ministers" style="color: white">
-              Menu
-              <span
-                class="fa fa-bars"
-                style="color: goldenrod; font-size: 17px"
-              ></span>
-            </h6>
-          </button>
-        </div>
-      </center>
-    </div>
-
-    <!-- Header and navigation for desktop view  -->
-
-    <div class="second">
-      <svg
-        style="
-          text-align: left;
-          background: black;
-          width: 100%;
-          margin-left: 0px;
-        "
-        width="9.5cm"
-        height="2.0cm"
-        viewbox="0 0 950 200"
-        xmlns:s="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-      >
-        <g align="left" style="padding-left: -20px; background: white">
-          <image
-            x="-1300px"
-            y="-1px"
-            width="200"
-            height="200"
-            xlink:href="resources/images/ptlogo.webp"
-          >
-            <!--animate attributeName="width" repeatCount="indefinite" from="10" to="300" begin="1s" dur="15s" fill="freeze" /-->
-          </image>
-
-          <!--text font-weight="bold" fill="white" style="width: 200px; margin-top: 200px">This is bold and red</text-->
-        </g>
-      </svg>
-      <center>
-        <div class="drop">
-          <a id="ab" class="dropb" href="index.html">Home </a>
-        </div>
-        <div class="drop">
-          <a id="ab" class="dropb" href="#">Who We Are </a>
-
-          <div class="dropdown-content">
-            <a href="ministries.html">Ministries</a>
-            <a href="statement-of-faith.html">Statement Of Faith</a>
+          <div id="cop">
+            <div
+              id="bot1"
+              title="view our ministers"
+              style="background-color: none; height: 38px; cursor: pointer"
+              onclick="showHideNav(nav);"
+            >
+              <h6 tooltiptext="view our ministers" style="color: white">
+                <span
+                  class="fa fa-bars fa-2xl"
+                  style="color: goldenrod; font-size: 37px"
+                ></span>
+              </h6>
+            </div>
           </div>
-        </div>
+        </center>
+      </div>
 
-        <div class="drop">
-          <a id="ab" class="dropb" href="./events.html">Events </a>
-        </div>
+      <!-- Header and navigation for desktop view  -->
 
-        <div class="drop">
-          <a id="ab" class="dropb" href="#">Give</a>
-        </div>
-        <div class="drop">
-          <a id="ab" class="dropb" href="contactus.html">Contact Us</a>
-        </div>
-        <div class="drop">
-          <a id="ab" class="dropb" href="#">Media Center</a>
-        </div>
-        <div class="drop">
-          <a id="ab" class="dropb" href="./login.html">Login</a>
-        </div>
-      </center>
-    </div>
+      <div class="second">
+        <svg
+          style="
+            text-align: left;
+            background: black;
+            width: 100%;
+            margin-left: 0px;
+          "
+          width="9.5cm"
+          height="2.0cm"
+          viewbox="0 0 950 200"
+          xmlns:s="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <g align="left" style="padding-left: -20px; background: white">
+            <image
+              x="-1300px"
+              y="-1px"
+              width="200"
+              height="200"
+              xlink:href="resources/images/ptlogo.webp"
+            >
+              <!--animate attributeName="width" repeatCount="indefinite" from="10" to="300" begin="1s" dur="15s" fill="freeze" /-->
+            </image>
 
-    <div id="background">
-      <!--img src="resources/images/redeem1.jpg" width="100%" height="700px" /-->
+            <!--text font-weight="bold" fill="white" style="width: 200px; margin-top: 200px">This is bold and red</text-->
+          </g>
+        </svg>
+        <center>
+          <div class="drop">
+            <a id="ab" class="dropb" href="home.html">Home </a>
+          </div>
+          <div class="drop">
+            <a id="ab" class="dropb" href="#">Who We Are </a>
+
+            <div class="dropdown-content">
+              <a href="ministries.html">Ministries</a>
+              <a href="statement-of-faith.html">Statement Of Faith</a>
+            </div>
+          </div>
+
+          <div class="drop">
+            <a id="ab" class="dropb" href="./events.html">Events </a>
+          </div>
+
+          <div class="drop">
+            <a id="ab" class="dropb" href="#">Give</a>
+          </div>
+          <div class="drop">
+            <a id="ab" class="dropb" href="contactus.html">Contact Us</a>
+          </div>
+          <div class="drop">
+            <a id="ab" class="dropb" href="#">Media Center</a>
+          </div>
+          <div class="drop">
+            <a id="ab" class="dropb" href="./login.html">Login</a>
+          </div>
+        </center>
+      </div>
+
+      <div id="background">
+        <!--img src="resources/images/redeem1.jpg" width="100%" height="700px" /-->
+      </div>
     </div>
 
     <div id="conta">
