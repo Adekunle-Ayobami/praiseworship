@@ -35,6 +35,10 @@
       referrerpolicy="no-referrer"
     />
     <link rel="icon" href="resources/images/ptlogo.webp" type="image/png" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
       body {
@@ -43,6 +47,7 @@
         margin: 0;
         padding: 0;
         background-color: lightgray;
+        font-family: "Clash Grotesk";
       }
 
       .second {
@@ -174,34 +179,21 @@
         justify-content: center;
         align-items: center;
         gap: 1em;
-        margin-bottom: 10%;
       }
-      .login-mail,
-      .login-username,
-      .login-fname,
-      .login-lname,
-      .login-dob {
+      .login-form a {
+        text-decoration: none;
+      }
+      .login-mail {
         display: flex;
         flex-direction: column;
       }
-      .login-username,
-      .login-password,
-      .login-fname,
-      .login-lname,
-      .login-gender,
-      .login-dob label {
+      .login-password label {
         font-size: 20px;
         font-weight: 600;
       }
       .login-mail label {
         font-size: 20px;
-      }
-      .login-username input,
-      .login-fname input,
-      .login-lname input,
-      .login-dob input {
-        padding: 5%;
-        width: 40vw;
+        font-weight: 600;
       }
       .login-mail input {
         padding: 5%;
@@ -221,6 +213,7 @@
         width: 30%;
         margin-left: -10%;
       }
+
       .login-check div {
         margin-top: 7px;
       }
@@ -228,38 +221,50 @@
         width: 20px;
         cursor: pointer;
       }
-      .login-gender {
+
+      .watch-heading {
         display: flex;
-        flex-direction: column;
+        margin-left: 10em;
+        margin-top: 2em;
       }
-      .login-gender select {
-        padding: 3%;
+      .watch-img img {
+        /* width: 40vw; */
+        width: 100%; /* Make the image fill the container */
+        height: auto;
+        display: block;
+      }
+      .watch-img {
+        clip-path: polygon(
+          50% 0%,
+          100% 25%,
+          100% 75%,
+          50% 100%,
+          0% 75%,
+          0% 25%
+        );
+        overflow: hidden;
+      }
+      .online-service h3 {
         width: 40vw;
-        border: 2px solid black;
-        border-radius: 5px;
-        cursor: pointer;
+        font-size: 40px;
+        font-weight: 600;
+        margin-left: 2.2em;
       }
-      .login-gender select option {
-        font-size: 20px;
-        padding-bottom: 5%;
-      }
-      .login-dob input {
-        cursor: pointer;
+      .online-service p {
+        margin-left: 5.6em;
       }
       .btn1 {
-        background-color: black;
-        padding: 15%;
-        width: 8vw;
-        color: white;
-        border: none;
-        cursor: pointer;
-        outline: none;
-        border-radius: 12px;
+        background-color: #000dbb;
+        color: #fff;
+        margin-bottom: 1em;
+        padding: 8px;
+        width: 30vw;
       }
-      .btn1:hover {
-        background-color: white;
-        color: black;
-        border: 1px solid black;
+      .btn2 {
+        background-color: #000dbb;
+        color: #fff;
+        padding: 8px;
+        width: 30vw;
       }
     </style>
 
@@ -388,9 +393,9 @@
         </a>
       </svg>
       <center>
-        <div class="drop">
+        <!-- <div class="drop">
           <a id="ab" class="dropb" href="index.html">Home </a>
-        </div>
+        </div> -->
         <div class="drop">
           <a id="ab" class="dropb" href="#">Who We Are </a>
 
@@ -421,58 +426,17 @@
       </center>
     </div>
 
-    <div class="login-form">
-      <form action="">
-        <div class="login-username">
-          <label for="">Username*</label>
-          <input type="text" placeholder="Enter username" required />
-        </div>
-        <div class="login-password">
-          <label for="">Password*</label>
-          <input type="password" placeholder="Enter your password" required />
-        </div>
-        <div class="login-password">
-          <label for="">Confirm password*</label>
-          <input type="password" placeholder="Confirm your password" required />
-        </div>
-        <div class="login-fname">
-          <label for="">First Name*</label>
-          <input type="text" placeholder="Enter your password" required />
-        </div>
-        <div class="login-lname">
-          <label for="">Last Name*</label>
-          <input type="text" placeholder="Enter your password" required />
-        </div>
-        <div class="login-mail">
-          <label for="">Email*</label>
-          <input type="email" placeholder="Enter your password" required />
-        </div>
-        <div class="login-gender">
-          <label for="">Gender</label>
-          <select name="" id="">
-            <option value="select" selected style="display: none">
-              Select
-            </option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-          <!-- <input type="text" placeholder="Enter your password" required /> -->
-        </div>
-        <div class="login-dob">
-          <label for="">Birthday</label>
-          <input type="date" placeholder="Enter your password" required />
-        </div>
-        <!-- <div class="login-check">
-          <input type="checkbox" />
-          <div>Remember me</div>
-        </div> -->
-        <div class="signup">
-          Already a member? <a href="./login.html">Login Here.</a>
-        </div>
-        <div class="btn-div">
-          <button class="btn1">SIGN UP</button>
-        </div>
-      </form>
+    <div class="watch-heading">
+      <div class="online-service">
+        <h3>WATCH PRAISE TABERNACLE SERVICE ONLINE</h3>
+        <p>Stream Live every Sunday @ 10:15am</p>
+
+        <button class="btn1">WATCH VIA YOUTUBE</button>
+        <button class="btn2">VIEW MESSAGES FROM MEDIA CENTER</button>
+      </div>
+      <div class="watch-img">
+        <img src="resources/images/firstimage.jpg" alt="" />
+      </div>
     </div>
   </body>
 </html>

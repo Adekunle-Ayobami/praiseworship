@@ -1,0 +1,179 @@
+body {
+  font-family: "Clash Grotesk", sans-serif;
+  margin: 0;
+}
+.outer-container {
+  display: flex;
+}
+.container {
+  background-image: url("/svgs/spirituality.png");
+  width: 50vw;
+  height: 100vh;
+}
+.logo {
+  margin: 3em 0 0 4.5em;
+}
+.container h3 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 30px;
+  margin-left: 3em;
+  width: 60%;
+}
+.container p {
+  color: #fff;
+  font-size: 21px;
+  margin-left: 4.7em;
+}
+.general {
+  color: #fff;
+  font-size: 15px;
+  margin-left: 6.6em;
+}
+.payment {
+  margin-left: 5em;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  gap: 2em;
+}
+.payment div {
+  display: flex;
+  gap: 2em;
+}
+.payment span {
+  border: 2px solid #fff;
+  font-size: 19px;
+  padding: 10px;
+  width: 25%;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.payment span:hover {
+  background-color: #fff;
+  color: black;
+}
+.container2 {
+  background-color: #fff;
+  width: 50vw;
+  height: 100vh;
+}
+.payment-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+.currency {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+.cur1,
+.cur2,
+.offering,
+.det1,
+.det2,
+.det3,
+.det4,
+.comment {
+  display: flex;
+  flex-direction: column;
+}
+.cur1 select {
+  padding: 10px;
+  width: 7vw;
+  border-radius: 8px;
+  outline: none;
+  border: 2px solid #b8b8b8;
+  cursor: pointer;
+}
+.cur1 select option {
+  font-size: 18px;
+}
+.cur2 input {
+  padding: 10px;
+  width: 20vw;
+  border-radius: 8px;
+  outline: none;
+  border: 2px solid #b8b8b8;
+}
+.offering {
+  margin-bottom: 1em;
+}
+.offering select {
+  width: 30vw;
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  border: 2px solid #b8b8b8;
+  cursor: pointer;
+}
+.offering select option {
+  font-size: 18px;
+}
+.details,
+.details2 {
+  display: flex;
+  gap: 1.5em;
+  margin-bottom: 1em;
+}
+.details input,
+.details2 input {
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  border: 2px solid #b8b8b8;
+}
+.comment {
+  margin-bottom: 1em;
+}
+.comment input {
+  width: 28.5vw;
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  border: 2px solid #b8b8b8;
+}
+.btn {
+  background-color: #d82c0d;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  width: 30vw;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+}
+.bank-transfer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5em;
+}
+.bank-transfer select {
+  width: 35vw;
+  padding: 9px;
+  border-radius: 7px;
+  border: 1px solid lightblue;
+  cursor: pointer;
+  outline: none;
+  color: gray;
+}
+.bank-transfer select option {
+  font-size: 18px;
+}

@@ -47,6 +47,8 @@
         margin: 0;
         padding: 0;
         font-family: "Clash Grotesk";
+        font-family: "Clash Grotesk", sans-serif;
+        height: 140vh;
       }
 
       .second {
@@ -106,10 +108,10 @@
         padding-top: 1px;
         opacity: 1;
       }
-      body #firstdiv:hover {
+      /* body #firstdiv:hover {
         opacity: 1;
         background-color: black;
-      }
+      } */
 
       #container {
         display: grid;
@@ -183,23 +185,26 @@
         margin-top: 20px;
       }
 
-      .second:hover {
-        /* opacity: 0.4; */
+      /* .second:hover {
+        opacity: 0.4;
         background-color: black;
-      }
+      } */
 
       /* Footer */
       .footer {
         padding: 30px 30px 60px 30px;
         background-color: lightgray;
         margin-top: -110em;
-        height: 42vh;
+        height: 23vh;
         display: flex;
+        opacity: 0.5;
         justify-content: space-around;
+        position: fixed;
+        bottom: 0;
       }
       .footer img {
-        width: 8vw;
-        margin-bottom: 2%;
+        width: 5vw;
+        margin-bottom: 1%;
       }
       .footer-logo {
         display: flex;
@@ -214,9 +219,15 @@
         font-size: 14px;
         font-weight: 600;
       }
+      .footer-contact {
+        margin-top: -4em;
+      }
       .footer-contact p {
         font-size: 14px;
         font-weight: 600;
+      }
+      .footer-icons {
+        margin-top: -0.4em;
       }
       .footer-icons i {
         color: black;
@@ -229,7 +240,7 @@
       .footer-contact div {
         font-size: 14px;
         font-weight: 600;
-        margin-bottom: 5%;
+        margin-bottom: 1%;
       }
       .footer-church a {
         color: black;
@@ -256,6 +267,34 @@
         cursor: pointer;
         opacity: 1;
         transition: opacity 0.5s ease-in-out;
+      }
+
+      .page-container {
+        color: #fff;
+        display: flex;
+        gap: 4em;
+        margin-left: 36%;
+        margin-top: 6%;
+      }
+      .page-container div {
+        font-size: 30px;
+        border: 1px solid white;
+        padding: 6px;
+        width: 15%;
+        text-align: center;
+      }
+      .page-container a {
+        color: #fff;
+        text-decoration: none;
+      }
+      #bgVideo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
       }
 
       @media (max-width: 500px) {
@@ -295,46 +334,46 @@
     </style>
 
     <script>
-      function showHideNav(sidenav) {
-        document.getElementById(sidenav);
-        if (sidenav.style.display == "block") {
-          sidenav.style.display = "none";
-        } else {
-          sidenav.style.display = "block";
-        }
-      }
+      // function showHideNav(sidenav) {
+      //   document.getElementById(sidenav);
+      //   if (sidenav.style.display == "block") {
+      //     sidenav.style.display = "none";
+      //   } else {
+      //     sidenav.style.display = "block";
+      //   }
+      // }
 
-      function hidenav(sidenav) {
-        document.getElementById(sidenav);
-        if (sidenav.style.display == "block") {
-          sidenav.style.display = "none";
-        }
-      }
+      // function hidenav(sidenav) {
+      //   document.getElementById(sidenav);
+      //   if (sidenav.style.display == "block") {
+      //     sidenav.style.display = "none";
+      //   }
+      // }
 
-      $(document).ready(function () {
-        $("#bot1").click(function () {
-          $("#nav").show(200);
-        });
-      });
+      // $(document).ready(function () {
+      //   $("#bot1").click(function () {
+      //     $("#nav").show(200);
+      //   });
+      // });
 
-      $(document).ready(function () {
-        $("#nav #bot2").click(function () {
-          $("#nav").hide(1000);
-        });
-      });
+      // $(document).ready(function () {
+      //   $("#nav #bot2").click(function () {
+      //     $("#nav").hide(1000);
+      //   });
+      // });
 
-      $(document).ready(function () {
-        $("#accord").accordion({ collapsible: true });
-      });
+      // $(document).ready(function () {
+      //   $("#accord").accordion({ collapsible: true });
+      // });
 
-      $(document).ready(function () {
-        $("#show").click(function () {
-          $("#accord").show(500);
-        });
-        $("#hide").click(function () {
-          $("#accord").hide(500);
-        });
-      });
+      // $(document).ready(function () {
+      //   $("#show").click(function () {
+      //     $("#accord").show(500);
+      //   });
+      //   $("#hide").click(function () {
+      //     $("#accord").hide(500);
+      //   });
+      // });
 
       function scrollDown() {
         const scrollAmount = 850;
@@ -365,10 +404,17 @@
     </script>
   </head>
   <body>
-    <div
+    <video autoplay muted loop id="bgVideo">
+      <source
+        src="resources/videos/Praise Tabernacle - Made with Clipchamp (1).mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+    <!-- <div
       id="firstdiv"
       style="
-        background-color: black;
+        /* background-color: black; */
         width: 100%;
         opacity: 0.5;
         height: 50px;
@@ -376,7 +422,7 @@
       "
     >
       <center style="width: 400px; margin-left: 65%">
-        <!-- <div id="cop">
+        <div id="cop">
           <a
             style="
               color: white;
@@ -385,7 +431,8 @@
               display: flex;
               gap: 10px;
             "
-            href="mailto:hello@infytel.ng"op
+            href="mailto:hello@infytel.ng"
+            op
             >admin@praisetabernacle.org.uk
             <span class="fa fa-envelope" style="color: goldenrod"></span>
           </a>
@@ -398,7 +445,7 @@
             +234-81-2453-4489
             <span class="fa fa-phone" style="color: goldenrod"></span>
           </a>
-        </div> -->
+        </div>
 
         <div id="cop">
           <div
@@ -408,6 +455,7 @@
             onclick="showHideNav(nav);"
           >
             <h6 tooltiptext="view our ministers" style="color: white">
+              <i class="fa-solid fa-bars fa-lg"></i>
               <span
                 class="fa fa-bars fa-2xl"
                 style="color: goldenrod; font-size: 37px"
@@ -416,18 +464,13 @@
           </div>
         </div>
       </center>
-    </div>
+    </div> -->
 
     <!-- Header and navigation for desktop view  -->
 
     <div class="second">
       <svg
-        style="
-          text-align: left;
-          background: black;
-          width: 100%;
-          margin-left: 0px;
-        "
+        style="text-align: left; width: 100%; margin-left: 0px"
         width="9.5cm"
         height="2.0cm"
         viewbox="0 0 950 200"
@@ -449,9 +492,9 @@
         </g>
       </svg>
       <center>
-        <div class="drop">
+        <!-- <div class="drop">
           <a id="ab" class="dropb" href="index.html">Home </a>
-        </div>
+        </div> -->
         <div class="drop">
           <a id="ab" class="dropb" href="#">Who We Are </a>
 
@@ -468,7 +511,7 @@
         </div>
 
         <div class="drop">
-          <a id="ab" class="dropb" href="#">Give</a>
+          <a id="ab" class="dropb" href="./give.html">Give</a>
         </div>
         <div class="drop">
           <a id="ab" class="dropb" href="contactus.html">Contact Us</a>
@@ -484,7 +527,7 @@
 
     <!-- navigation bar -->
 
-    <div id="nav">
+    <!-- <div id="nav">
       <span style="padding: 5px; margin-top: 10px">
         <span
           id="bot2"
@@ -649,7 +692,7 @@
           </form>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- text content on background video -->
 
@@ -658,9 +701,9 @@
         id="hc"
         style="
           text-shadow: 2px 3px 2px darkslateblue;
-          width: 150%;
-          font-size: 35px;
-          margin: 40% 10% 10% 20%;
+          width: 100%;
+          font-size: 33px;
+          margin: 20% 10% 10% 20%;
         "
       >
         Join a fellowship with the mission of proclaiming Jesus and maturing
@@ -668,128 +711,40 @@
       </h1>
     </div>
 
+    <div class="page-container">
+      <div>JOIN</div>
+      <div><a href="https://www.youtube.com/c/PRAISETVMINISTRY">WATCH</a></div>
+      <div><a href="./give.html">GIVE</a></div>
+    </div>
+
     <!-- component leave to display background video   -->
-    <div>
+    <!-- <div>
       <video class="background-video" autoplay loop muted>
         <source
           src="resources/videos/Praise Tabernacle - Made with Clipchamp (1).mp4"
           type="video/mp4"
         />
       </video>
-    </div>
-    <div id="container">
-      <div
-        id="content1"
-        style="background-color: black; opacity: 0.9; height: 350px"
-      >
-        <p style="opacity: 1; font-size: 16px; color: white; padding: 20px">
-          Hello! Thank you for stopping by our website. If you are searching for
-          a bible-based church, we believe we are the place for you. Feel free
-          to check out the "The Church" page linked below where you can find the
-          answers to all your questions. If you have never been to our church
-          before, come by this Sunday! We would love to get to know you. We want
-          to see lives changed here by the power of Jesus Christ, and we believe
-          we thrive as believers when we fellowship. We look forward to meeting
-          you! God bless. Pastor Femi
-
-          <br /><br />
-          <a href="./events.html"
-            ><input type="button" class="btn-success btn-small" value="Events"
-          /></a>
-        </p>
-      </div>
-      <div
-        id="content2"
-        style="
-          background-color: green;
-          height: 350px;
-          background-color: black;
-          opacity: 0.9;
-        "
-      >
-        <img
-          src="resources/images/firstimage.jpg"
-          width="550px"
-          height="350px"
-        />
-      </div>
-    </div>
-
-    <div
-      style="
-        background-color: #778899;
-        height: 450px;
-        width: 100%;
-        opacity: 1;
-        margin-bottom: 10px;
-      "
-    >
-      <div id="container2">
-        <div style="margin-top: 40px; opacity: 1">
-          <img
-            src="resources/images/image2.jpg"
-            style="border-radius: 10px"
-            width="550px"
-            height="350px"
-          />
-        </div>
-        <div style="margin-top: 50px; opacity: 1">
-          <h2 style="color: navy; text-align: center; font-weight: bold">
-            OUR MISSION
-          </h2>
-          <h6 style="color: #8b4513; text-align: center; font-weight: bold">
-            PROCLAIMING JESUS, MATURING BELEIVERS
-          </h6>
-          <p
-            style="
-              opacity: 1;
-              font-size: 16px;
-              color: white;
-              padding: 20px;
-              margin-top: -20px;
-            "
-          >
-            Praise Tabernacle is a place where people of all races, cultures,
-            and gender find love, hope, and fulfilment in Christ Jesus and
-            attain their God-ordained destiny. The Church has a great focus on
-            prayer, worship and seeking the truth that is in the Word of God.
-            Praise Tabernacle exists to release the gift that God has placed
-            within you and unfold the specific plan He has for your life. This
-            church is a place where you will grow, a place where you will be
-            engaged, enthused and empowered to overcome life circumstances.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- <div id="footbars"></div>
-    <div
-      style="
-        width: 100%;
-        height: 35px;
-        background-color: lightgray;
-        opacity: 0.6;
-      "
-    ></div> -->
-
+    </div> -->
     <footer class="footer">
       <div class="footer-logo">
         <div>
           <img src="./resources/images/ptlogo.webp" alt="" />
         </div>
         <div>
-          <p>
-            RCCG Praise Tabernacle is registered with the UK Charities
-            Commission
-          </p>
-          <span>Charity Number 1085725</span>
+          <div style="font-size: 18px">
+            Copyright &#169; 2023 RCCG Praise Tabernacle London &reg;
+          </div>
         </div>
       </div>
       <div class="footer-contact">
-        <h5>CONTACT US</h5>
-        <p>1 Marsh Road Wembly HA0 1ES</p>
-        <a href="mailto:admin@praisetabernacle.org.uk">Email Admin</a>
-        <div>+44 20 8991 6733</div>
+        <h5 style="margin-bottom: -0.2em">CONTACT US</h5>
+        <div>Phone: +44 20 8991 6733</div>
+
+        <a href="mailto:admin@praisetabernacle.org.uk">
+          EMAIL: admin@praisetabernacle.org.uk</a
+        >
+        <p>Address: 1 Marsh Road Wembly HA0 1ES</p>
         <div class="footer-icons">
           <a href="https://www.facebook.com/praisetabs"
             ><i class="fa-brands fa-facebook fa-2xl"></i
@@ -805,31 +760,15 @@
           ></a>
         </div>
       </div>
-      <div class="footer-church">
-        <ul>
-          <li>The Church</li>
-          <li>Ministers</li>
-          <a href="./ministries.html"><li>Ministries</li></a>
-          <li>Our Beliefs</li>
-          <li>Media Centre</li>
-          <li>Sermons</li>
-          <li>Blog</li>
-          <li>Resourses</li>
-        </ul>
-      </div>
-      <div class="footer-copyright">
-        <div>Redesigned by Hans Technology</div>
-        <div>Copyright &#169; 2023 RCCG Praise Tabernacle London &reg;</div>
-      </div>
     </footer>
 
-    <div class="scroll-arrow" id="scrollDownBtn" onclick="scrollDown()">
+    <!-- <div class="scroll-arrow" id="scrollDownBtn" onclick="scrollDown()">
       <img
         width="50vw"
         height="70vh"
         src="resources/images/white-down-arrow-png-2.png"
         alt="Arrow Down"
       />
-    </div>
+    </div> -->
   </body>
 </html>

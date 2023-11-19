@@ -55,7 +55,7 @@ body {
   text-align: center;
   color: white;
   margin-top: 100px;
-  margin-left: 15%;
+  margin-left: 25%;
   margin-right: 45%;
   /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
   font-family: "Clash Grotesk";
@@ -130,8 +130,8 @@ body {
 .second {
   width: 100vw;
   height: 50px;
-  background-color: black;
-  border-bottom: 0.5px dotted whitesmoke;
+  /* background-color: black; */
+  /* border-bottom: 0.5px dotted whitesmoke; */
   position: sticky;
   margin-top: 0px;
   margin-left: 0vw;

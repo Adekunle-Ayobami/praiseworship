@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praise Tabernacle Church Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/give.css" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="resources/images/ptlogo.webp" type="image/png" />
+  </head>
+  <body>
+    <div class="outer-container">
+      <div class="container">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./svgs/ptlogo (1)-PhotoRoom 1.png" alt="" />
+          </a>
+        </div>
+        <h3>
+          PRAISE TABERNACLE <br />
+          ONLINE GIVING PLATFORM
+        </h3>
+        <p>GIVING OPTIONS</p>
+        <span class="general">GENERAL</span>
+
+        <div class="payment">
+          <div>
+            <span onclick="showPaymentMethod('card')">CARD PAYMENT</span>
+            <span onclick="redirectToPayPal()">PAYPAL</span>
+          </div>
+          <div>
+            <span onclick="showPaymentMethod('bank')">BANK TRANSFER</span>
+            <span onclick="redirectToTithe()">TITHE.ly</span>
+          </div>
+        </div>
+      </div>
+      <div class="container2" id="cardDetailsSection">
+        <div class="payment-logos">
+          <img src="/svgs/mastercard-logo.png" alt="mastercard-logo" />
+          <img src="/svgs/American express.png" alt="american-express" />
+          <img src="/svgs/VISA LOGO 1.png" alt="visa-logo" />
+        </div>
+        <span style="margin-left: 9em"
+          >Please note, any of the listed channels can accept your card</span
+        >
+        <form class="form-group" action="">
+          <div class="currency">
+            <div class="cur1">
+              <label for="">Currency</label>
+              <select name="" id="" required>
+                <option value="" selected style="display: none">
+                  Select currency
+                </option>
+                <option value="">Nigerian Naira</option>
+                <option value="">United States Dollars</option>
+                <option value="">British Pounds</option>
+              </select>
+            </div>
+            <div class="cur2">
+              <label for="">Amount</label>
+              <input type="text" placeholder="Amount" required />
+            </div>
+          </div>
+          <div class="offering">
+            <label for="">Offering Type</label>
+            <select name="" id="" required>
+              <option value="" selected style="display: none">
+                Select bank transfer type
+              </option>
+              <option value="">General Offering</option>
+              <option value="">Tithe</option>
+              <option value="">Thanksgiving Offering</option>
+              <option value="">Africa Missions</option>
+              <option value="">Special Offering</option>
+            </select>
+          </div>
+          <div class="details">
+            <div class="det1">
+              <label for="">First Name</label>
+              <input type="text" required />
+            </div>
+            <div class="det2">
+              <label for="">Last Name</label>
+              <input type="text" required />
+            </div>
+          </div>
+          <div class="details2">
+            <div class="det3">
+              <label for="">Email</label>
+              <input type="email" required />
+            </div>
+            <div class="det4">
+              <label for="">Phone</label>
+              <input type="text" required />
+            </div>
+          </div>
+          <div class="comment">
+            <label for="">Comment</label>
+            <input type="text" required />
+          </div>
+          <div>
+            <button class="btn">GIVE NOW</button>
+          </div>
+        </form>
+      </div>
+      <div style="display: none" class="container2" id="bankTransferSection">
+        <div
+          style="
+            display: flex;
+            gap: 19em;
+            margin-left: 5em;
+            margin-top: 2em;
+            margin-bottom: 2em;
+          "
+        >
+          <span>BANK TRANSFER</span>
+          <span
+            onclick="showPaymentMethod('card')"
+            style="color: red; cursor: pointer"
+            >CLOSE <i class="fa-solid fa-x"></i
+          ></span>
+        </div>
+        <form action="">
+          <div class="bank-transfer">
+            <label for="">Select from the options below to view details</label>
+            <select
+              name="bankTransferType"
+              id="bankTransferType"
+              required
+              onchange="showBankDetails()"
+            >
+              <option value="" selected style="display: none">
+                Select bank transfer type
+              </option>
+              <option value="GeneralOffering">General Offering</option>
+              <option value="Tithe">Tithe</option>
+              <option value="ThanksgivingOffering">
+                Thanksgiving Offering
+              </option>
+              <option value="AfricaMissions">Africa Missions</option>
+              <option value="SpecialOffering">Special Offering</option>
+            </select>
+          </div>
+        </form>
+
+        <div id="bankDetails">
+          <!-- Bank details content goes here -->
+          <p class="bank-details">
+            Bank Name: Lloyds TSB <br />
+            Account Name: Praise Tabernacle Jubilee Account <br />
+            Account Number: 0064 8015 <br />
+            Sort Code: 30-93-88
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showPaymentMethod(paymentMethod) {
+        // Hide all payment sections
+        document.getElementById("bankTransferSection").style.display = "none";
+        document.getElementById("cardDetailsSection").style.display = "none";
+
+        // Add conditions to show the specific payment section
+        if (paymentMethod === "bank") {
+          document.getElementById("bankTransferSection").style.display =
+            "block";
+        } else if (paymentMethod === "card") {
+          document.getElementById("cardDetailsSection").style.display = "block";
+        }
+        // Add similar conditions for other payment methods if needed
+      }
+
+      function redirectToPayPal() {
+        // Redirect to the PayPal payment page
+        window.location.href = "https://www.paypal.com"; // Replace with the actual PayPal payment page URL
+      }
+
+      function redirectToTithe() {
+        // Redirect to the PayPal payment page
+        window.location.href = "https://get.tithe.ly/"; // Replace with the actual PayPal payment page URL
+      }
+    </script>
+  </body>
+</html>
