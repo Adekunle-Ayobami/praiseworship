@@ -132,8 +132,8 @@ body {
   height: 50px;
   /* background-color: black; */
   /* border-bottom: 0.5px dotted whitesmoke; */
-  position: sticky;
-  margin-top: 0px;
+  /* position: sticky; */
+  margin-top: 10px;
   margin-left: 0vw;
   margin-right: 10vw;
   z-index: 1;
