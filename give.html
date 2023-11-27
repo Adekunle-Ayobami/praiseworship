@@ -190,6 +190,26 @@
         // Redirect to the PayPal payment page
         window.location.href = "https://get.tithe.ly/"; // Replace with the actual PayPal payment page URL
       }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Hide bank details initially
+        var bankDetails = document.getElementById("bankDetails");
+        bankDetails.style.display = "none";
+      });
+
+      function showBankDetails() {
+        var bankTransferType = document.getElementById("bankTransferType");
+        var bankDetails = document.getElementById("bankDetails");
+
+        // Check if an option is selected
+        if (bankTransferType.value !== "") {
+          // Display bank details
+          bankDetails.style.display = "block";
+        } else {
+          // Hide bank details if no option is selected
+          bankDetails.style.display = "none";
+        }
+      }
     </script>
   </body>
 </html>

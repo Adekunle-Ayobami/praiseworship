@@ -51,14 +51,16 @@ body {
 }
 
 #textcontent {
-  width: 40%;
+  width: 55%;
   text-align: center;
   color: white;
   margin-top: 100px;
-  margin-left: 25%;
+  margin-left: 15%;
   margin-right: 45%;
   /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
   font-family: "Clash Grotesk";
+  position: relative;
+  top: 30em;
 }
 
 #dione {
@@ -134,7 +136,7 @@ body {
   /* border-bottom: 0.5px dotted whitesmoke; */
   /* position: sticky; */
   margin-top: 10px;
-  margin-left: 0vw;
+  margin-left: 5em;
   margin-right: 10vw;
   z-index: 1;
   opacity: 1;

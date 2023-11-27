@@ -47,7 +47,8 @@
       .second {
         position: sticky;
         top: -10px;
-        opacity: 0.5;
+        /* opacity: 0.5; */
+        padding-top: 1.5em;
       }
 
       #total {
@@ -56,7 +57,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-        margin-top: 0px;
+        margin-top: -10px;
         width: 100%;
         height: 600px;
         opacity: 0.9;
@@ -111,7 +112,7 @@
         padding: 30px 30px 60px 30px;
         background-color: lightgray;
         margin-top: -108.5em;
-        height: 42vh;
+        height: 32vh;
         display: flex;
         justify-content: space-around;
       }
@@ -142,7 +143,7 @@
       .footer-contact a {
         font-size: 17px;
         font-weight: 600;
-        color: blue;
+        color: black;
       }
       .footer-contact div {
         font-size: 14px;
@@ -387,7 +388,7 @@
   </head>
   <body>
     <div id="total">
-      <div
+      <!-- <div
         style="
           margin-top: -20px;
           width: 100%;
@@ -398,7 +399,7 @@
         "
       >
         <center style="width: 400px; margin-left: 65%">
-          <!-- <div id="cop">
+          <div id="cop">
           <a style="color: white" href="mailto:hello@infytel.ng"
             >hello@gn128.ng
             <span class="fa fa-envelope" style="color: goldenrod"></span>
@@ -409,7 +410,7 @@
             +234-81-2453-4489
             <span class="fa fa-phone" style="color: goldenrod"></span>
           </a>
-        </div> -->
+        </div>
 
           <div id="cop">
             <div
@@ -427,18 +428,13 @@
             </div>
           </div>
         </center>
-      </div>
+      </div> -->
 
       <!-- Header and navigation for desktop view  -->
 
       <div class="second">
         <svg
-          style="
-            text-align: left;
-            background: black;
-            width: 100%;
-            margin-left: 0px;
-          "
+          style="text-align: left; width: 100%; margin-left: 0px"
           width="9.5cm"
           height="2.0cm"
           viewbox="0 0 950 200"
@@ -461,7 +457,7 @@
             </g>
           </a>
         </svg>
-        <center>
+        <center style="margin-left: 35em">
           <!-- <div class="drop">
             <a id="ab" class="dropb" href="home.html">Home </a>
           </div> -->
@@ -1662,18 +1658,19 @@
           <img src="./resources/images/ptlogo.webp" alt="" />
         </div>
         <div>
-          <p>
-            RCCG Praise Tabernacle is registered with the UK Charities
-            Commission
-          </p>
-          <span>Charity Number 1085725</span>
+          <div style="font-size: 18px">
+            Copyright &#169; 2023 RCCG Praise Tabernacle London &reg;
+          </div>
         </div>
       </div>
       <div class="footer-contact">
-        <h5>CONTACT US</h5>
-        <p>1 Marsh Road Wembly HA0 1ES</p>
-        <a href="mailto:admin@praisetabernacle.org.uk">Email Admin</a>
-        <div>+44 20 8991 6733</div>
+        <h5 style="margin-bottom: -0.2em">CONTACT US</h5>
+        <div>Phone: +44 20 8991 6733</div>
+
+        <a href="mailto:admin@praisetabernacle.org.uk">
+          EMAIL: admin@praisetabernacle.org.uk</a
+        >
+        <p>Address: 1 Marsh Road Wembly HA0 1ES</p>
         <div class="footer-icons">
           <a href="https://www.facebook.com/praisetabs"
             ><i class="fa-brands fa-facebook fa-2xl"></i
@@ -1688,22 +1685,6 @@
             ><i class="fa-brands fa-youtube fa-2xl"></i
           ></a>
         </div>
-      </div>
-      <div class="footer-church">
-        <ul>
-          <li>The Church</li>
-          <li>Ministers</li>
-          <a href="./ministries.html"><li>Ministries</li></a>
-          <li>Our Beliefs</li>
-          <li>Media Centre</li>
-          <li>Sermons</li>
-          <li>Blog</li>
-          <li>Resourses</li>
-        </ul>
-      </div>
-      <div class="footer-copyright">
-        <div>Redesigned by Hans Technology</div>
-        <div>Copyright &#169; 2023 RCCG Praise Tabernacle London &reg;</div>
       </div>
     </footer>
   </body>
