@@ -60,7 +60,7 @@ body {
   /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
   font-family: "Clash Grotesk";
   position: relative;
-  top: 30em;
+  top: 5em;
 }
 
 #dione {
@@ -162,7 +162,6 @@ center {
   z-index: 1;
   padding-top: 10px;
 }
-
 #cop {
   position: relative;
   display: inline-table;
