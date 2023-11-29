@@ -177,7 +177,7 @@ body {
 .bank-transfer select option {
   font-size: 18px;
 }
-.bank-details {
+table {
   margin-left: 5em;
   font-weight: 600;
 }
