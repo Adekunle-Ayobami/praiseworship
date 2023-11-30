@@ -35,6 +35,10 @@
       referrerpolicy="no-referrer"
     />
     <link rel="icon" href="resources/images/ptlogo.webp" type="image/png" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
       body {
@@ -42,11 +46,15 @@
         /* font-size: 25.5%; */
         margin: 0;
         padding: 0;
-        background-color: lightgray;
+        font-family: "Clash Grotesk";
+        background-color: #ebebeb;
       }
 
+      #ab {
+        color: black;
+      }
       .second {
-        /* position: sticky; */
+        position: sticky;
         top: -10px;
         height: 15vh;
       }
@@ -168,34 +176,21 @@
         justify-content: center;
         align-items: center;
         gap: 1em;
-        margin-bottom: 10%;
       }
-      .login-mail,
-      .login-username,
-      .login-fname,
-      .login-lname,
-      .login-dob {
+      .login-form a {
+        text-decoration: none;
+      }
+      .login-mail {
         display: flex;
         flex-direction: column;
       }
-      .login-username,
-      .login-password,
-      .login-fname,
-      .login-lname,
-      .login-gender,
-      .login-dob label {
+      .login-password label {
         font-size: 20px;
         font-weight: 600;
       }
       .login-mail label {
         font-size: 20px;
-      }
-      .login-username input,
-      .login-fname input,
-      .login-lname input,
-      .login-dob input {
-        padding: 5%;
-        width: 40vw;
+        font-weight: 600;
       }
       .login-mail input {
         padding: 5%;
@@ -215,6 +210,7 @@
         width: 30%;
         margin-left: -10%;
       }
+
       .login-check div {
         margin-top: 7px;
       }
@@ -222,28 +218,10 @@
         width: 20px;
         cursor: pointer;
       }
-      .login-gender {
-        display: flex;
-        flex-direction: column;
-      }
-      .login-gender select {
-        padding: 3%;
-        width: 40vw;
-        border: 2px solid black;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      .login-gender select option {
-        font-size: 20px;
-        padding-bottom: 5%;
-      }
-      .login-dob input {
-        cursor: pointer;
-      }
       .btn1 {
         background-color: black;
         padding: 15%;
-        width: 8vw;
+        width: 5vw;
         color: white;
         border: none;
         cursor: pointer;
@@ -255,8 +233,54 @@
         color: black;
         border: 1px solid black;
       }
-      #ab {
-        color: black;
+      .welcome {
+        display: flex;
+      }
+      .welcome h3 {
+        color: #091e42;
+        font-weight: 600;
+      }
+      .welcome p {
+        width: 73%;
+      }
+      .welcome span {
+        font-size: 20px;
+        color: #091e42;
+        font-style: italic;
+        font-weight: 600;
+      }
+      .welcome img {
+        width: 32vw;
+      }
+      .our-mission {
+        display: flex;
+        gap: 20px;
+      }
+      .our-mission h3 {
+        color: #091e42;
+        font-weight: 600;
+      }
+      .our-mission span {
+        color: #091e42;
+        font-size: 24px;
+      }
+      .our-mission img {
+        width: 32vw;
+      }
+      .our-mission p {
+        width: 73%;
+      }
+      .section-one {
+        background-image: url("resources/images/church-background.png");
+      }
+      .core-belief {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .first-belief {
+        display: flex;
       }
     </style>
 
@@ -379,9 +403,12 @@
           </g>
         </a>
       </svg>
-      <center style="margin-left: 27em">
+      <center style="margin-left: 25em">
+        <!-- <div class="drop">
+          <a id="ab" class="dropb" href="index.html">Home </a>
+        </div> -->
         <div class="drop">
-          <a id="ab" class="dropb" href="#">Who We Are </a>
+          <a id="ab" class="dropb" href="./who-we-are.html">Who We Are </a>
 
           <div class="dropdown-content">
             <!--input type="button" value="Ministers" onclick="showHideNav(nav); event.setPropagation();" style="border: none; color: black; background-color: white; height: 40px; width: 200px;" /-->
@@ -410,58 +437,85 @@
       </center>
     </div>
 
-    <div class="login-form">
-      <form action="">
-        <div class="login-username">
-          <label for="">Username*</label>
-          <input type="text" placeholder="Enter username" required />
+    <div class="section-one">
+      <div class="welcome">
+        <div style="margin-left: 7em; margin-top: 3em">
+          <h3>WELCOME</h3>
+          <p>
+            Hello! Thank you for stopping by our website. If you are searching
+            for a bible-based church, we believe we are the place for you. Feel
+            free to check out the "The Church" page linked below where you can
+            find the answers to all your questions. If you have never been to
+            our church before, come by this Sunday! We would love to get to know
+            you. We want to see lives changed here by the power of Jesus Christ,
+            and we believe we thrive as believers when we fellowship. We look
+            forward to meeting you! God bless.
+          </p>
+          <span>Pastor Femi Popoola</span>
         </div>
-        <div class="login-password">
-          <label for="">Password*</label>
-          <input type="password" placeholder="Enter your password" required />
+        <div>
+          <img src="resources/images/church1.png" alt="" />
         </div>
-        <div class="login-password">
-          <label for="">Confirm password*</label>
-          <input type="password" placeholder="Confirm your password" required />
+      </div>
+      <div class="our-mission">
+        <div>
+          <img src="resources/images/church2.png" alt="" />
         </div>
-        <div class="login-fname">
-          <label for="">First Name*</label>
-          <input type="text" placeholder="Enter your password" required />
+        <div style="margin-top: 2em">
+          <h3>OUR MISSION</h3>
+          <span>PROCLAIMING JESUS, MATURING BELIEVERS</span>
+          <p>
+            Praise Tabernacle is a place where people of all races, cultures,
+            and gender find love, hope, and fulfilment in Christ Jesus and
+            attain their God-ordained destiny. The Church has a great focus on
+            prayer, worship and seeking the truth that is in the Word of God.
+            Praise Tabernacle exists to release the gift that God has placed
+            within you and unfold the specific plan He has for your life. This
+            church is a place where you will grow, a place where you will be
+            engaged, enthused and empowered to overcome life circumstances.
+          </p>
         </div>
-        <div class="login-lname">
-          <label for="">Last Name*</label>
-          <input type="text" placeholder="Enter your password" required />
+      </div>
+    </div>
+    <div class="core-belief">
+      <h3>9 CORE BELIEFS</h3>
+      <div class="first-belief">
+        <div>
+          <h5>GOD</h5>
+          <p>We believe in God the Father, the Creator of heaven and earth.</p>
+          <span>Genesis 1:1, Psalm 86: 9-10, Isaiah 43: 10-11</span>
         </div>
-        <div class="login-mail">
-          <label for="">Email*</label>
-          <input type="email" placeholder="Enter your password" required />
+        <div>
+          <h5>JESUS CHRIST AS SON OF GOD</h5>
+          <p>
+            We believe that He is the Son of God; who took away our sins and the
+            Saviour of the world. We also believe that Jesus is God and was born
+            by Mary the Virgin. He is God revealed in the flesh. Through Him,
+            all things were created.
+          </p>
+          <span>John 1:1-14; John 14:9; Matthew 1:18-25, Isaiah 9:6</span>
         </div>
-        <div class="login-gender">
-          <label for="">Gender</label>
-          <select name="" id="">
-            <option value="select" selected style="display: none">
-              Select
-            </option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-          <!-- <input type="text" placeholder="Enter your password" required /> -->
+        <div>
+          <h5>JESUS'S DEATH RESURRECTION AND ENTHRONED</h5>
+          <p>
+            We believe in Jesus Christ His Son, who was crucified for the sins
+            of all mankind and rose on the third day to sit at the right hand of
+            God the Father.
+          </p>
+          <span
+            >Is. 53:4-10, I Pet. 2:24, John 10:11, Gal. 3:13, Matt. 20:28, I
+            Cor. 15:3, Rom. 4:25, II Cor. 5:14, Heb 2:9, Heb 9:26
+          </span>
         </div>
-        <div class="login-dob">
-          <label for="">Birthday</label>
-          <input type="date" placeholder="Enter your password" required />
+        <div>
+          <h5>PRESENCE OF THE HOLY SPIRIT</h5>
+          <p>
+            We believe in the Holy Spirit who dwells in us and guides us
+            according to the will of the Father.
+          </p>
+          <span>John 14:16-17; John 15:26</span>
         </div>
-        <!-- <div class="login-check">
-          <input type="checkbox" />
-          <div>Remember me</div>
-        </div> -->
-        <div class="signup">
-          Already a member? <a href="./login.html">Login Here.</a>
-        </div>
-        <div class="btn-div">
-          <button class="btn1">SIGN UP</button>
-        </div>
-      </form>
+      </div>
     </div>
   </body>
 </html>
