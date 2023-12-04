@@ -47,7 +47,7 @@
         margin: 0;
         padding: 0;
         font-family: "Clash Grotesk";
-        background-color: #ebebeb;
+        background-image: url("resources/images/church-background.png");
       }
 
       #ab {
@@ -270,32 +270,236 @@
         width: 73%;
       }
       .section-one {
-        background-image: url("resources/images/church-background.png");
       }
       .core-belief {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        gap: 1em;
+        background-color: #f4f4f4;
+      }
+      .core-belief h3 {
+        color: #091e42;
+        font-size: 50px;
+        font-weight: 600;
       }
       .first-belief {
         display: flex;
+        gap: 30px;
+      }
+      .first-belief h5 {
+        font-size: 20px;
+        font-weight: 600;
       }
       .belief1 {
         text-align: center;
-        width: 15vw;
+        width: 21vw;
+        border-radius: 16px;
+        background-color: #fef9e8;
+        padding: 20px;
       }
       .belief2 {
         text-align: center;
-        width: 15vw;
+        width: 21vw;
+        border-radius: 16px;
+        background-color: #fcddec;
+        padding: 20px;
       }
       .belief3 {
         text-align: center;
-        width: 15vw;
+        width: 21vw;
+        border-radius: 16px;
+        background-color: #e6edf7;
+        padding: 20px;
       }
       .belief4 {
         text-align: center;
-        width: 15vw;
+        width: 21vw;
+        border-radius: 16px;
+        background-color: #eff8ed;
+        padding: 20px;
+      }
+      .belief5 {
+        text-align: center;
+        width: 21vw;
+        border-radius: 16px;
+        background-color: #fbe9ea;
+        padding: 20px;
+      }
+      .belief6 {
+        text-align: center;
+        width: 21vw;
+        border-radius: 16px;
+        background-color: #e9f6ed;
+        padding: 20px;
+      }
+      .belief7 {
+        text-align: center;
+        width: 21vw;
+        border-radius: 16px;
+        background-color: #eee;
+        padding: 20px;
+      }
+      .belief8 {
+        text-align: center;
+        width: 21vw;
+        border-radius: 16px;
+        background-color: #e5f0ff;
+        padding: 20px;
+      }
+      .belief9 {
+        text-align: center;
+        width: 21vw;
+        border-radius: 16px;
+        background-color: #acfaff;
+        padding: 20px;
+      }
+
+      /*  */
+      .ministers {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2em;
+        padding-bottom: 5em;
+        gap: 1em;
+        background-color: #f8f8f8;
+      }
+      .ministers h2 {
+        font-weight: 600;
+        color: #091e42;
+        font-size: 48px;
+      }
+      .ministers p {
+        color: #091e42;
+      }
+      .senior-pastor {
+        width: 29vw;
+        text-align: center;
+        padding: 20px;
+        border-radius: 16px;
+        border: 1px solid #dde1e6;
+        background-color: #fff;
+      }
+      .pastor {
+        width: 30vw;
+        text-align: center;
+        padding: 20px;
+        border-radius: 16px;
+        border: 1px solid #dde1e6;
+        background-color: #fff;
+      }
+      .senior-pastor h5,
+      .pastor h5 {
+        color: #091e42;
+        font-size: 24px;
+        font-weight: 600;
+      }
+      .senior-pastor span,
+      .pastor span {
+        color: #091e42;
+        font-size: 13px;
+      }
+      .senior-pastor p,
+      .pastor p {
+        margin-top: 2em;
+        color: #091e42;
+      }
+
+      /*  */
+      /* Footer */
+      .footer {
+        padding: 55px 30px 60px 30px;
+        background-color: lightgray;
+        margin-top: -110em;
+        height: 45vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+      .footer img {
+        width: 8vw;
+        margin-bottom: 2%;
+      }
+      .footer-logo {
+        display: flex;
+        flex-direction: column;
+      }
+      .footer-logo p {
+        width: 11vw;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .footer-logo span {
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .footer-contact p {
+        font-size: 14px;
+      }
+      .footer-icons {
+        margin-top: 5em;
+      }
+      .footer-icons i {
+        color: black;
+      }
+      .footer-contact a {
+        font-size: 15px;
+        color: black;
+      }
+      .footer-contact div {
+        font-size: 14px;
+        margin-bottom: 5%;
+      }
+      .footer-church ul {
+        list-style-type: none;
+      }
+      .footer-church li {
+        font-size: 17px;
+        font-weight: 600;
+      }
+      .footer-copyright div {
+        font-size: 17px;
+        font-weight: 600;
+        width: 20vw;
+      }
+
+      @media (max-width: 500px) {
+        .footer {
+          flex-direction: column;
+          height: 150vh;
+          text-align: center;
+        }
+        .footer-logo img {
+          width: 150px;
+        }
+        .footer-logo p {
+          margin-left: 13%;
+          width: 70vw;
+          font-size: 20px;
+        }
+        .footer-logo span {
+          font-size: 17px;
+        }
+        .footer-contact p {
+          font-size: 17px;
+        }
+        .scroll-arrow {
+          display: none;
+        }
+        .footer-copyright div {
+          margin-left: 13%;
+          width: 70vw;
+          font-size: 20px;
+        }
+        .footer-church li {
+          display: flex;
+          margin-left: 35%;
+        }
       }
     </style>
 
@@ -531,6 +735,145 @@
           <span>John 14:16-17; John 15:26</span>
         </div>
       </div>
+      <div class="first-belief">
+        <div class="belief5">
+          <h5>SALVATION BY ACCEPTING JESUS CHRIST</h5>
+          <p>
+            We believe that salvation is freely given to all who accept Jesus
+            Christ as their Lord and Saviour.
+          </p>
+        </div>
+        <div class="belief6">
+          <h5>BAPTISM BY IMMERSION</h5>
+          <p>
+            We believe that following faith in Jesus, every believer is to be
+            baptized by immersion in the name of the Father, Son, and Holy
+            Spirit.
+          </p>
+          <span>
+            Matt. 28:19, Acts 2:24; Acts 16:15; Acts 18:8; Acts 19:4-5
+          </span>
+        </div>
+        <div class="belief7">
+          <h5>DIVINE HEALING</h5>
+          <p>
+            We believe in divine healing, the restoration of health to the one
+            who believes and acts out God's Word, and that Jesus is the Healer.
+          </p>
+          <span>Matt. 8:15-17, Is 53:4-5; Gal. 3:13; I Peter 2:24 </span>
+        </div>
+      </div>
+      <div class="first-belief">
+        <div class="belief8">
+          <h5>BIBLE AS GOD'S WORD</h5>
+          <p>We believe in the Bible as the infallible Word of God.</p>
+          <span>2Tim. 3:16-17, Deut. 4:22; Rev. 22:18, 19; Matt. 24:34-38</span>
+        </div>
+        <div class="belief9">
+          <h5>JESUS PHYSICAL RETURN</h5>
+          <p>
+            We believe that Jesus Christ will physically and visibly return to
+            earth for a second time to establish His kingdom on earth.
+          </p>
+          <span>Acts 1:9-11; John 14:3</span>
+        </div>
+      </div>
     </div>
+    <div class="ministers">
+      <h2>MINISTERS</h2>
+      <p style="font-size: 24px">Meet our Senior Pastors</p>
+      <div style="display: flex; gap: 2em">
+        <div class="senior-pastor">
+          <img src="resources/images/senior-pastor.svg" alt="senior-pastor" />
+          <h5>PASTOR FEMI POPOOLA</h5>
+          <span>SENIOR PASTOR, PRAISE TABERNACLE LONDON</span>
+          <p>
+            Pastor Femi is the Senior Pastor of Praise Tabernacle. He is a
+            visionary leader. He has a heart for people and communities. He is
+            motivated by a desire to see broken people, families and communities
+            empowered and transformed by the dynamic power of God. He is also an
+            encourager with a belief that everyone has a God-given purpose,
+            potential and gifting that is to be used to enrich all of our lives.
+            He sees his ministry as a Pastor as “bringing out the ministry of
+            others through education and personal development." Pastor Femi is
+            married to Pastor Jumoke and they are blessed with three wonderful
+            children.
+          </p>
+        </div>
+        <div class="pastor">
+          <img
+            src="resources/images/assistant-pastor.svg"
+            alt="assistant-pastor"
+          />
+          <h5>PASTOR JUMOKE POPOOLA</h5>
+          <span>PASTOR, PRAISE TABERNACLE LONDON</span>
+          <p>
+            Pastor Jumoke Popoola is a Pastor in Praise Tabernacle and oversees
+            the spiritual lives of many through the various ministries she heads
+            and runs in Praise Tabernacle. Through discipleship and regular
+            programs, she reaches out to women and women-in-ministry. In her
+            personal ministry, through Turning Pages she reaches out to all
+            women with the necessary gifts and talents to enable them reach
+            their God-given potential in Christ. She is a gifted and
+            uncompromising teacher of God's Word. She preaches practically and
+            relevantly, challenging and encouraging her listeners to discover
+            and fulfil their calling and purpose. Pastor Jumoke is married to
+            Praise tabernacle's Senior Pastor Femi Popoola and is the mother of
+            Lola, Tomi and Toluwa.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+    <footer class="footer">
+      <div style="display: flex; justify-content: space-around">
+        <div class="footer-logo">
+          <div>
+            <img src="./resources/images/ptlogo.webp" alt="" />
+          </div>
+          <div>
+            <div style="font-size: 15px">
+              RCCG Praise Tabernacle is registered <br />
+              with the Uk Charities Commission <br />
+              Charity Number 1085725
+            </div>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <h5 style="margin-bottom: -0.2em; font-weight: 600">CONTACT US</h5>
+          <div style="margin-bottom: -0.2em">Phone: +44 2089916733</div>
+          <a href="mailto:admin@praisetabernacle.org.uk">
+            EMAIL: admin@praisetabernacle.org.uk</a
+          >
+          <p>Address: 1 Marsh Road Wembly HA0 1ES</p>
+          <div class="footer-icons">
+            <a href="https://www.facebook.com/praisetabs"
+              ><i class="fa-brands fa-facebook fa-2xl"></i
+            ></a>
+            <a href="https://www.instagram.com/praisetabs">
+              <i class="fa-brands fa-instagram fa-2xl"></i
+            ></a>
+            <a href="https://twitter.com/praisetabs"
+              ><i class="fa-brands fa-x-twitter fa-2xl"></i
+            ></a>
+            <a href="https://www.youtube.com/channel/UCWPTM41eDRTfNU1SnCbZBJw"
+              ><i class="fa-brands fa-youtube fa-2xl"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <hr style="width: 100vw; border-color: lightcoral" />
+      <div
+        style="display: flex; justify-content: space-around; margin-left: -4em"
+      >
+        <div style="font-size: 15px; color: #002b6d; margin-right: -13em">
+          Copyright &#169; 2023 RCCG Praise Tabernacle London &reg;
+        </div>
+        <div style="color: #002b6d; font-size: 16px">
+          Designed by Hans Technology
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
