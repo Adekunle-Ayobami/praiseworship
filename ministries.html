@@ -43,7 +43,11 @@
         font-size: 75.5%;
         margin: 0;
         padding: 0;
-        background: #ebebeb;
+        background-image: url("resources/images/image\ 16.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
       }
 
       .second {
@@ -58,11 +62,6 @@
       }
 
       #total {
-        background-image: url("resources/images/image\ 16.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
         margin-top: -10px;
         width: 100%;
         height: 500px;
@@ -161,10 +160,10 @@
         flex-flow: row;
         flex-wrap: wrap;
         width: 70%;
-        margin-left: 15%;
+        margin-left: 10%;
         margin-right: 10%;
-        column-gap: 20px;
-        row-gap: 20px;
+        column-gap: 60px;
+        row-gap: 40px;
         margin-top: 40px;
         padding: 10px 0 4px 0;
         border-radius: 5px;
@@ -176,7 +175,7 @@
       } */
 
       #fig {
-        box-shadow: -0px -0px 20px lightgray;
+        /* box-shadow: -0px -0px 20px lightgray; */
         border: none;
       }
 
@@ -185,11 +184,16 @@
         flex-direction: horizontal;
         flex-flow: column;
         flex-wrap: wrap;
-        width: 450px;
+        width: 25vw;
         border-radius: 5px;
         background-color: #fff;
         padding-right: -50px;
         margin-left: 7px;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+      }
+      #fig:hover {
+        transform: scale(1.1); /* Increase the size on hover (zoom effect) */
       }
 
       #note {
@@ -247,7 +251,7 @@
       .footer {
         padding: 55px 30px 60px 30px;
         background-color: lightgray;
-        margin-top: -78em;
+        margin-top: -101em;
         height: 45vh;
         display: flex;
         flex-direction: column;
@@ -274,12 +278,14 @@
         font-size: 14px;
         font-weight: 600;
       }
+      .footer-icons {
+        margin-top: 5em;
+      }
       .footer-icons i {
         color: black;
       }
       .footer-contact a {
-        font-size: 17px;
-        font-weight: 600;
+        font-size: 15px;
         color: black;
       }
       .footer-contact div {
@@ -517,218 +523,224 @@
     </div>
 
     <div id="conta">
-      <div id="fig">
-        <img
-          src="resources/images/grace2.webp"
-          style="border-radius: 5px; box-shadow: -0px -0px 20px lightgray"
-          width="100%"
-          height="190px"
-        />
-        <div id="figcap" style="padding: 15px">
-          <span>
-            <!-- <img src="resources/images/img1.jpg" height="50px" width="50px" /> -->
-            <h4 style="color: navy">Awesome Grace</h4>
-          </span>
-          <p style="font-size: 14px">
-            Worship in music- psalms, hymns and spiritual songs
-          </p>
-          <p style="font-size: 14px; font-weight: bold; color: cadetblue">
-            Our heart is what God seeks
-          </p>
+      <div style="display: flex; gap: 20px">
+        <div id="fig">
+          <img
+            src="resources/images/grace2.webp"
+            style="border-radius: 5px; box-shadow: -0px -0px 20px lightgray"
+            width="100%"
+            height="190px"
+          />
+          <div id="figcap" style="padding: 15px">
+            <span>
+              <!-- <img src="resources/images/img1.jpg" height="50px" width="50px" /> -->
+              <h4 style="color: navy">Awesome Grace</h4>
+            </span>
+            <p style="font-size: 14px">
+              Worship in music- psalms, hymns and spiritual songs
+            </p>
+            <p style="font-size: 14px; font-weight: bold; color: cadetblue">
+              Our heart is what God seeks
+            </p>
+          </div>
+        </div>
+
+        <div id="fig">
+          <img
+            src="resources/images/cornrrstone1.jpg"
+            style="border-radius: 5px; box-shadow: -0px -0px 20px lightgray"
+            width="100%"
+            height="190px"
+          />
+          <div id="figcap" style="padding: 15px">
+            <span>
+              <!-- <img src="resources/images/img2.jpg" height="50px" width="50px" /> -->
+              <h4 style="color: navy">ConnerStone Church</h4>
+            </span>
+            <p style="font-size: 14px">
+              Worship in music- psalms, hymns and spiritual songs
+            </p>
+            <p style="font-size: 14px; font-weight: bold; color: cadetblue">
+              Our heart is what God seeks
+            </p>
+          </div>
+        </div>
+
+        <div id="fig">
+          <img
+            src="resources/images/nugen.jpeg"
+            style="border-radius: 5px; box-shadow: -0px -0px 20px lightgray"
+            width="100%"
+            height="190px"
+          />
+          <div id="figcap" style="padding: 15px">
+            <span>
+              <!-- <img src="resources/images/img3.jpg" height="50px" width="50px" /> -->
+              <h4 style="color: navy">NUGEN - Youth Church</h4>
+            </span>
+            <p style="font-size: 14px">
+              Worship in music- psalms, hymns and spiritual songs
+            </p>
+            <p style="font-size: 14px; font-weight: bold; color: cadetblue">
+              Our heart is what God seeks
+            </p>
+          </div>
         </div>
       </div>
 
-      <div id="fig">
-        <img
-          src="resources/images/cornrrstone1.jpg"
-          style="border-radius: 5px; box-shadow: -0px -0px 20px lightgray"
-          width="100%"
-          height="190px"
-        />
-        <div id="figcap" style="padding: 15px">
-          <span>
-            <!-- <img src="resources/images/img2.jpg" height="50px" width="50px" /> -->
-            <h4 style="color: navy">ConnerStone Church</h4>
-          </span>
-          <p style="font-size: 14px">
-            Worship in music- psalms, hymns and spiritual songs
-          </p>
-          <p style="font-size: 14px; font-weight: bold; color: cadetblue">
-            Our heart is what God seeks
-          </p>
+      <div style="display: flex; gap: 20px">
+        <div id="fig">
+          <img
+            src="resources/images/hospitality2.jpg"
+            style="border-radius: 5px; box-shadow: -0px -0px 20px lightgray"
+            width="100%"
+            height="190px"
+          />
+          <div id="figcap" style="padding: 15px">
+            <span>
+              <!-- <img src="resources/images/SUWED.jpg" height="50px" width="50px" /> -->
+              <h4 style="color: navy">Hospitality / Welcome Team</h4>
+            </span>
+            <p style="font-size: 14px">
+              Worship in music- psalms, hymns and spiritual songs
+            </p>
+            <p style="font-size: 14px; font-weight: bold; color: cadetblue">
+              Our heart is what God seeks
+            </p>
+          </div>
+        </div>
+
+        <div id="fig">
+          <img
+            src="resources/images/praisemedia.jfif"
+            style="border-radius: 5px; box-shadow: -0px -0px 20px lightgray"
+            width="100%"
+            height="190px"
+          />
+          <div id="figcap" style="padding: 15px">
+            <span>
+              <!-- <img src="" height="50px" width="50px" /> -->
+              <h4 style="color: navy">Praise Media</h4>
+            </span>
+            <p style="font-size: 14px">
+              Worship in music- psalms, hymns and spiritual songs
+            </p>
+            <p style="font-size: 14px; font-weight: bold; color: cadetblue">
+              Our heart is what God seeks
+            </p>
+          </div>
+        </div>
+
+        <div id="fig">
+          <img
+            src="resources/images/juniorchurch3.jfif"
+            style="border-radius: 5px; box-shadow: -0px -0px 20px lightgray"
+            width="100%"
+            height="190px"
+          />
+          <div id="figcap" style="padding: 15px">
+            <span>
+              <!-- <img src="resources/images/img1.jpg" height="50px" width="50px" /> -->
+              <h4 style="color: navy">Junior Church 3+</h4>
+            </span>
+            <p style="font-size: 14px">
+              Worship in music- psalms, hymns and spiritual songs
+            </p>
+            <p style="font-size: 14px; font-weight: bold; color: cadetblue">
+              Our heart is what God seeks
+            </p>
+          </div>
         </div>
       </div>
 
-      <div id="fig">
-        <img
-          src="resources/images/nugen.jpeg"
-          style="border-radius: 5px; box-shadow: -0px -0px 20px lightgray"
-          width="100%"
-          height="190px"
-        />
-        <div id="figcap" style="padding: 15px">
-          <span>
-            <!-- <img src="resources/images/img3.jpg" height="50px" width="50px" /> -->
-            <h4 style="color: navy">NUGEN - Youth Church</h4>
-          </span>
-          <p style="font-size: 14px">
-            Worship in music- psalms, hymns and spiritual songs
-          </p>
-          <p style="font-size: 14px; font-weight: bold; color: cadetblue">
-            Our heart is what God seeks
-          </p>
+      <div style="display: flex; gap: 20px">
+        <div id="fig">
+          <img
+            src="resources/images/men and women.jfif"
+            style="border-radius: 5px; box-shadow: -0px -0px 20px lightgray"
+            width="100%"
+            height="190px"
+          />
+          <div id="figcap" style="padding: 15px">
+            <span>
+              <!-- <img src="resources/images/img2.jpg" height="50px" width="50px" /> -->
+              <h4 style="color: navy">Men & Women Fellowship</h4>
+            </span>
+            <p style="font-size: 14px">
+              Worship in music- psalms, hymns and spiritual songs
+            </p>
+            <p style="font-size: 14px; font-weight: bold; color: cadetblue">
+              Our heart is what God seeks
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div id="fig">
-        <img
-          src="resources/images/hospitality2.jpg"
-          style="border-radius: 5px; box-shadow: -0px -0px 20px lightgray"
-          width="100%"
-          height="190px"
-        />
-        <div id="figcap" style="padding: 15px">
-          <span>
-            <!-- <img src="resources/images/SUWED.jpg" height="50px" width="50px" /> -->
-            <h4 style="color: navy">Hospitality / Welcome Team</h4>
-          </span>
-          <p style="font-size: 14px">
-            Worship in music- psalms, hymns and spiritual songs
-          </p>
-          <p style="font-size: 14px; font-weight: bold; color: cadetblue">
-            Our heart is what God seeks
-          </p>
+        <div id="fig">
+          <img
+            src="resources/images/eldersfellowship.jfif"
+            style="border-radius: 5px; box-shadow: -0px -0px 20px lightgray"
+            width="100%"
+            height="190px"
+          />
+          <div id="figcap" style="padding: 15px">
+            <span>
+              <!-- <img src="resources/images/img3.jpg" height="50px" width="50px" /> -->
+              <h4 style="color: navy">Elders Fellowship</h4>
+            </span>
+            <p style="font-size: 14px">
+              Worship in music- psalms, hymns and spiritual songs
+            </p>
+            <p style="font-size: 14px; font-weight: bold; color: cadetblue">
+              Our heart is what God seeks
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div id="fig">
-        <img
-          src="resources/images/praisemedia.jfif"
-          style="border-radius: 5px; box-shadow: -0px -0px 20px lightgray"
-          width="100%"
-          height="190px"
-        />
-        <div id="figcap" style="padding: 15px">
-          <span>
-            <!-- <img src="" height="50px" width="50px" /> -->
-            <h4 style="color: navy">Praise Media</h4>
-          </span>
-          <p style="font-size: 14px">
-            Worship in music- psalms, hymns and spiritual songs
-          </p>
-          <p style="font-size: 14px; font-weight: bold; color: cadetblue">
-            Our heart is what God seeks
-          </p>
+        <div id="fig">
+          <img
+            src="resources/images/sundayschool.jfif"
+            style="border-radius: 5px; box-shadow: -0px -0px 20px lightgray"
+            width="100%"
+            height="190px"
+          />
+          <div id="figcap" style="padding: 15px">
+            <span>
+              <!-- <img src="resources/images/img3.jpg" height="50px" width="50px" /> -->
+              <h4 style="color: navy">Sunday School</h4>
+            </span>
+            <p style="font-size: 14px">
+              Worship in music- psalms, hymns and spiritual songs
+            </p>
+            <p style="font-size: 14px; font-weight: bold; color: cadetblue">
+              Our heart is what God seeks
+            </p>
+          </div>
         </div>
-      </div>
 
-      <div id="fig">
-        <img
-          src="resources/images/juniorchurch3.jfif"
-          style="border-radius: 5px; box-shadow: -0px -0px 20px lightgray"
-          width="100%"
-          height="190px"
-        />
-        <div id="figcap" style="padding: 15px">
-          <span>
-            <!-- <img src="resources/images/img1.jpg" height="50px" width="50px" /> -->
-            <h4 style="color: navy">Junior Church 3+</h4>
-          </span>
-          <p style="font-size: 14px">
-            Worship in music- psalms, hymns and spiritual songs
-          </p>
-          <p style="font-size: 14px; font-weight: bold; color: cadetblue">
-            Our heart is what God seeks
-          </p>
-        </div>
-      </div>
-
-      <div id="fig">
-        <img
-          src="resources/images/men and women.jfif"
-          style="border-radius: 5px; box-shadow: -0px -0px 20px lightgray"
-          width="100%"
-          height="190px"
-        />
-        <div id="figcap" style="padding: 15px">
-          <span>
-            <!-- <img src="resources/images/img2.jpg" height="50px" width="50px" /> -->
-            <h4 style="color: navy">Men & Women Fellowship</h4>
-          </span>
-          <p style="font-size: 14px">
-            Worship in music- psalms, hymns and spiritual songs
-          </p>
-          <p style="font-size: 14px; font-weight: bold; color: cadetblue">
-            Our heart is what God seeks
-          </p>
-        </div>
-      </div>
-
-      <div id="fig">
-        <img
-          src="resources/images/eldersfellowship.jfif"
-          style="border-radius: 5px; box-shadow: -0px -0px 20px lightgray"
-          width="100%"
-          height="190px"
-        />
-        <div id="figcap" style="padding: 15px">
-          <span>
-            <!-- <img src="resources/images/img3.jpg" height="50px" width="50px" /> -->
-            <h4 style="color: navy">Elders Fellowship</h4>
-          </span>
-          <p style="font-size: 14px">
-            Worship in music- psalms, hymns and spiritual songs
-          </p>
-          <p style="font-size: 14px; font-weight: bold; color: cadetblue">
-            Our heart is what God seeks
-          </p>
-        </div>
-      </div>
-
-      <div id="fig">
-        <img
-          src="resources/images/christiantraining3.jfif"
-          style="border-radius: 5px; box-shadow: -0px -0px 20px lightgray"
-          width="100%"
-          height="190px"
-        />
-        <div id="figcap" style="padding: 15px">
-          <span>
-            <!-- <img src="resources/images/SUWED.jpg" height="50px" width="50px" /> -->
-            <h4 style="color: navy">Training</h4>
-          </span>
-          <p style="font-size: 14px">
-            Worship in music- psalms, hymns and spiritual songs
-          </p>
-          <p style="font-size: 14px; font-weight: bold; color: cadetblue">
-            Our heart is what God seeks
-          </p>
-        </div>
-      </div>
-
-      <div id="fig">
-        <img
-          src="resources/images/sundayschool.jfif"
-          style="border-radius: 5px; box-shadow: -0px -0px 20px lightgray"
-          width="100%"
-          height="190px"
-        />
-        <div id="figcap" style="padding: 15px">
-          <span>
-            <!-- <img src="resources/images/img3.jpg" height="50px" width="50px" /> -->
-            <h4 style="color: navy">Sunday School</h4>
-          </span>
-          <p style="font-size: 14px">
-            Worship in music- psalms, hymns and spiritual songs
-          </p>
-          <p style="font-size: 14px; font-weight: bold; color: cadetblue">
-            Our heart is what God seeks
-          </p>
-        </div>
+        <!-- <div id="fig">
+          <img
+            src="resources/images/christiantraining3.jfif"
+            style="border-radius: 5px; box-shadow: -0px -0px 20px lightgray"
+            width="100%"
+            height="190px"
+          />
+          <div id="figcap" style="padding: 15px">
+            <span>
+              <img src="resources/images/SUWED.jpg" height="50px" width="50px" />
+              <h4 style="color: navy">Training</h4>
+            </span>
+            <p style="font-size: 14px">
+              Worship in music- psalms, hymns and spiritual songs
+            </p>
+            <p style="font-size: 14px; font-weight: bold; color: cadetblue">
+              Our heart is what God seeks
+            </p>
+          </div>
+        </div> -->
       </div>
     </div>
 
-    <div id="bars">
+    <!-- <div id="bars">
       <h6
         id="hh"
         style="
@@ -742,8 +754,8 @@
         place video ADs here
       </h6>
 
-      <!--video src="resources/videos/backvid2.mp4" width="100%" controls height="100%" ></video-->
-    </div>
+      video src="resources/videos/backvid2.mp4" width="100%" controls height="100%" ></video
+    </div> -->
 
     <!-- <div id="footbars"></div>
     <div
@@ -771,8 +783,7 @@
         </div>
         <div class="footer-contact">
           <h5 style="margin-bottom: -0.2em">CONTACT US</h5>
-          <div>Phone: +44 20 8991 6733</div>
-
+          <div style="margin-bottom: -0.2em">Phone: +44 2089916733</div>
           <a href="mailto:admin@praisetabernacle.org.uk">
             EMAIL: admin@praisetabernacle.org.uk</a
           >
@@ -798,15 +809,14 @@
         style="
           display: flex;
           justify-content: space-around;
-          margin-left: 9.2em;
-          gap: 20%;
+          margin-left: -4em;
         "
       >
-        <div style="color: #002b6d; font-size: 16px">
-          Redesigned by Hans Technology
-        </div>
-        <div style="font-size: 18px; color: #002b6d">
+        <div style="font-size: 15px; color: #002b6d; margin-right: -13em">
           Copyright &#169; 2023 RCCG Praise Tabernacle London &reg;
+        </div>
+        <div style="color: #002b6d; font-size: 16px">
+          Designed by Hans Technology
         </div>
       </div>
     </footer>
