@@ -48,13 +48,13 @@
         padding: 0;
         background-color: lightgray;
         font-family: "Clash Grotesk";
+        background-image: url("resources/images/church-interior-neat-bible\ 1.png");
       }
 
       .second {
         position: sticky;
         top: -10px;
         height: 15vh;
-        opacity: 0.5;
       }
 
       .background-video {
@@ -167,11 +167,6 @@
         background-color: #253131;
         margin-top: 20px;
       }
-
-      .second:hover {
-        /* opacity: 0.4; */
-        background-color: black;
-      }
       .login-form form {
         margin-top: 8%;
         display: flex;
@@ -249,9 +244,11 @@
         font-size: 40px;
         font-weight: 600;
         margin-left: 2.2em;
+        color: #fff;
       }
       .online-service p {
         margin-left: 5.6em;
+        color: #fff;
       }
       .btn1 {
         background-color: #000dbb;
@@ -259,6 +256,12 @@
         margin-bottom: 1em;
         padding: 8px;
         width: 30vw;
+        border-radius: 8px;
+      }
+      .btn1:hover {
+        background-color: transparent;
+        color: white;
+        border: 1px solid #000dbb;
       }
       .btn2 {
         background-color: #000dbb;
@@ -309,10 +312,18 @@
           $("#accord").hide(500);
         });
       });
+
+      function watchYoutube() {
+        // Redirect to the PayPal payment page
+        window.open(
+          "https://www.youtube.com/channel/UCWPTM41eDRTfNU1SnCbZBJw",
+          "_blank"
+        );
+      }
     </script>
   </head>
   <body>
-    <div
+    <!-- <div
       id="firstdiv"
       style="
         background-color: black;
@@ -323,7 +334,7 @@
       "
     >
       <center style="width: 400px; margin-left: 65%">
-        <!-- <div id="cop">
+        <div id="cop">
           <a
             style="color: white; font-size: 12px; opacity: 1"
             href="mailto:hello@infytel.ng"
@@ -339,9 +350,9 @@
             +234-81-2453-4489
             <span class="fa fa-phone" style="color: goldenrod"></span>
           </a>
-        </div> -->
+        </div>
 
-        <!-- <div id="cop">
+        <div id="cop">
           <button
             id="bot1"
             title="view our ministers"
@@ -356,20 +367,15 @@
               ></span>
             </h6>
           </button>
-        </div> -->
+        </div>
       </center>
-    </div>
+    </div> -->
 
     <!-- Header and navigation for desktop view  -->
 
     <div class="second">
       <svg
-        style="
-          text-align: left;
-          background: black;
-          width: 100%;
-          padding-left: 20px;
-        "
+        style="text-align: left; width: 100%; padding-left: 20px"
         width="9.5cm"
         height="2.0cm"
         viewbox="0 0 950 200"
@@ -392,7 +398,7 @@
           </g>
         </a>
       </svg>
-      <center>
+      <center style="margin-left: 22em">
         <!-- <div class="drop">
           <a id="ab" class="dropb" href="index.html">Home </a>
         </div> -->
@@ -418,7 +424,7 @@
           <a id="ab" class="dropb" href="contactus.html">Contact Us</a>
         </div>
         <div class="drop">
-          <a id="ab" class="dropb" href="#">Media Center</a>
+          <a id="ab" class="dropb" href="./watch-link.html">Media Center</a>
         </div>
         <div class="drop">
           <a id="ab" class="dropb" href="./login.html">Login</a>
@@ -431,8 +437,8 @@
         <h3>WATCH PRAISE TABERNACLE SERVICE ONLINE</h3>
         <p>Stream Live every Sunday @ 10:15am</p>
 
-        <button class="btn1">WATCH VIA YOUTUBE</button>
-        <button class="btn2">VIEW MESSAGES FROM MEDIA CENTER</button>
+        <button class="btn1" onclick="watchYoutube()">WATCH VIA YOUTUBE</button>
+        <!-- <button class="btn2">VIEW MESSAGES FROM MEDIA CENTER</button> -->
       </div>
       <div class="watch-img">
         <img src="resources/images/firstimage.jpg" alt="" />

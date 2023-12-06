@@ -189,13 +189,14 @@
       .login-fname,
       .login-lname,
       .login-gender,
-      .login-dob label {
-        font-size: 20px;
+      .login-dob,
+      .login-mail label {
+        font-size: 17px;
         font-weight: 600;
       }
-      .login-mail label {
+      /* .login-mail label {
         font-size: 20px;
-      }
+      } */
       .login-username input,
       .login-fname input,
       .login-lname input,
@@ -264,6 +265,26 @@
       #ab {
         color: black;
       }
+      /*  */
+      .password {
+        position: relative;
+      }
+
+      #password-eye {
+        position: absolute;
+        top: 50%;
+        right: 1em;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+
+      #password-eye1 {
+        position: absolute;
+        top: 50%;
+        right: 1em;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
     </style>
 
     <script>
@@ -305,6 +326,24 @@
         });
         $("#hide").click(function () {
           $("#accord").hide(500);
+        });
+      });
+
+      $(document).ready(function () {
+        $("#password-eye").click(function () {
+          const passwordInput = $("#password");
+          const type =
+            passwordInput.attr("type") === "password" ? "text" : "password";
+          passwordInput.attr("type", type);
+        });
+      });
+
+      $(document).ready(function () {
+        $("#password-eye1").click(function () {
+          const passwordInput = $("#password1");
+          const type =
+            passwordInput.attr("type") === "password" ? "text" : "password";
+          passwordInput.attr("type", type);
         });
       });
     </script>
@@ -408,7 +447,7 @@
           <a id="ab" class="dropb" href="contactus.html">Contact Us</a>
         </div>
         <div class="drop">
-          <a id="ab" class="dropb" href="#">Media Center</a>
+          <a id="ab" class="dropb" href="./watch-link.html">Media Center</a>
         </div>
         <div class="drop">
           <a id="ab" class="dropb" href="./login.html">Login</a>
@@ -420,27 +459,50 @@
       <form action="">
         <div class="login-username">
           <label for="">Username*</label>
-          <input type="text" placeholder="Enter username" required />
+          <input
+            type="text"
+            placeholder="Enter username"
+            required
+            autocomplete="off"
+          />
         </div>
         <div class="login-password">
           <label for="">Password*</label>
-          <input type="password" placeholder="Enter your password" required />
+          <div class="password">
+            <input
+              id="password"
+              type="password"
+              placeholder="Enter your password"
+              autocomplete="new-password"
+              required
+            />
+            <i class="fa fa-eye" id="password-eye" aria-hidden="true"></i>
+          </div>
         </div>
         <div class="login-password">
           <label for="">Confirm password*</label>
-          <input type="password" placeholder="Confirm your password" required />
+          <div class="password">
+            <input
+              id="password1"
+              type="password"
+              placeholder="Enter your password"
+              autocomplete="new-password"
+              required
+            />
+            <i class="fa fa-eye" id="password-eye1" aria-hidden="true"></i>
+          </div>
         </div>
         <div class="login-fname">
           <label for="">First Name*</label>
-          <input type="text" placeholder="Enter your password" required />
+          <input type="text" placeholder="Enter your firstname" required />
         </div>
         <div class="login-lname">
           <label for="">Last Name*</label>
-          <input type="text" placeholder="Enter your password" required />
+          <input type="text" placeholder="Enter your lastname" required />
         </div>
         <div class="login-mail">
           <label for="">Email*</label>
-          <input type="email" placeholder="Enter your password" required />
+          <input type="email" placeholder="Enter your email" required />
         </div>
         <div class="login-gender">
           <label for="">Gender</label>

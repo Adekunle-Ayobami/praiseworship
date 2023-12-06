@@ -40,6 +40,10 @@
       href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
 
     <style>
       body {
@@ -63,7 +67,7 @@
       }
 
       #total {
-        background-image: url("resources/images/contactus1.jpg");
+        background-image: url("resources/images/praise_tabs_20\ 1.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -163,7 +167,7 @@
       }
       #note {
         width: 30%;
-        margin-left: 10%;
+        margin-left: 25%;
         margin-right: 60%;
         margin-top: 200px;
         opacity: 0.7;
@@ -202,11 +206,116 @@
           transform: translateX(-100%);
         }
       }
+
+      /* Contact Us */
+      .contact-us {
+        display: flex;
+        justify-content: center;
+        gap: 11em;
+        padding-top: 5em;
+        padding-bottom: 5em;
+        background-color: #fff;
+      }
+      .contact-us-inner h4 {
+        color: #091e42;
+        font-size: 40px;
+        font-weight: 600;
+      }
+      .contact-us-inner p {
+        color: #667085;
+        font-size: 16px;
+        margin-top: em;
+      }
+      .contact-us-inner1 h3 {
+        color: #000;
+        font-size: 40px;
+        font-weight: 600;
+      }
+      .form {
+        display: flex;
+        flex-direction: column;
+      }
+      .name,
+      .email,
+      .form-group,
+      .message {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1em;
+      }
+      .name,
+      .email,
+      .form-group,
+      .message label {
+        font-size: 18px;
+        color: #091e42;
+      }
+      .name input,
+      .email input {
+        padding: 4px 8px;
+        width: 25vw;
+        outline: none;
+        border: 1px solid #d0d5dd;
+        background-color: #fff;
+      }
+      .form-group input {
+        padding: 7px 8px;
+        width: 25vw;
+        outline: none;
+        border: 1px solid #d0d5dd;
+        background-color: #fff;
+      }
+      .message textarea {
+        border: 1px solid #d0d5dd;
+        background-color: #fff;
+        outline: none;
+        border-radius: 8px;
+      }
+      .policy {
+        display: flex;
+      }
+      .policy input {
+        width: 1vw;
+      }
+      .policy span {
+        position: relative;
+        top: -1.2em;
+      }
+      .form .submit {
+        border-radius: 5px;
+        background-color: #d82c0d;
+        border: 1px solid #d82c0d;
+        color: white;
+        cursor: pointer;
+      }
+      .form .submit:hover {
+        background-color: #fff;
+        color: #d82c0d;
+      }
+      .buses h4 {
+        font-size: 36px;
+      }
+      .buses p {
+        font-size: 16px;
+      }
+      .trains h4 {
+        font-size: 36px;
+      }
+      .trains p {
+        font-size: 16px;
+      }
+      .driving h4 {
+        font-size: 36px;
+      }
+      .driving p {
+        font-size: 16px;
+      }
+
       /* Footer */
       .footer {
         padding: 55px 30px 60px 30px;
         background-color: lightgray;
-        margin-top: -105em;
+        margin-top: -110em;
         height: 45vh;
         display: flex;
         flex-direction: column;
@@ -293,30 +402,6 @@
         }
       }
     </style>
-
-    <script>
-      function showHideNav(sidenav) {
-        document.getElementById(sidenav);
-        if (sidenav.style.display == "block") {
-          sidenav.style.display = "none";
-        } else {
-          sidenav.style.display = "block";
-        }
-      }
-
-      function hidenav(sidenav) {
-        document.getElementById(sidenav);
-        if (sidenav.style.display == "block") {
-          sidenav.style.display = "none";
-        }
-      }
-
-      $(document).ready(function () {
-        $("#bot1").click(function () {
-          $("#nav").show(200);
-        });
-      });
-    </script>
   </head>
   <body>
     <!-- Header and navigation for desktop view  -->
@@ -417,7 +502,7 @@
             <a id="ab" class="dropb" href="contactus.html">Contact Us</a>
           </div>
           <div class="drop">
-            <a id="ab" class="dropb" href="#">Media Center</a>
+            <a id="ab" class="dropb" href="./watch-link.html">Media Center</a>
           </div>
           <div class="drop">
             <a id="ab" class="dropb" href="./login.html">Login</a>
@@ -431,32 +516,33 @@
             text-shadow: 3px 4px 3px black;
             color: white;
             font-weight: bolder;
-            text-align: left;
+            text-align: center;
+            width: 50vw;
           "
         >
-          CONTACT US
+          WORSHIP WITH US
         </h1>
         <p
           style="
             text-shadow: 2px 3px 2px darkslategray;
             color: white;
-            text-align: left;
+            text-align: center;
             font-size: 17px;
             font-weight: bold;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
               'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            width: 50vw;
           "
         >
-          You can always reach out to us on the following.
+          You are only a visitor once, after that you are family. Discover the
+          fellowship of the brethren.
         </p>
       </div>
 
-      <div id="background">
-        <!--img src="resources/images/redeem1.jpg" width="100%" height="700px" /-->
-      </div>
+      <div id="background"></div>
     </div>
 
-    <div id="contamain">
+    <!-- <div id="contamain">
       <div id="contadiv" style="display: block; text-align: center">
         <h5 style="color: darkslateblue; text-align: center">Head Office</h5>
         <h6 style="color: darkslateblue; padding-left: 20px; font-weight: bold">
@@ -595,30 +681,6 @@
             gap: 20px;
           "
         >
-          <!-- <table cellpadding="5" cellspacing="5">
-            <tr>
-              <td><label for="name">Name</label></td>
-              <td><input type="text" required id="name" name="name" /></td>
-              <td><label for="mail">Email</label></td>
-              <td><input type="email" required id="mail" name="email" /></td>
-            </tr>
-            <tr></tr>
-            <tr>
-              <td><label for="mess">Message</label></td>
-              <td>
-                <textarea cols="40" rows="7" required id="mess" name="message">
-                        enter text
-                        </textarea
-                >
-              </td>
-            </tr>
-            <tr>
-              <td></td>
-              <td>
-                <input type="submit" value="Submit" />
-              </td>
-            </tr>
-          </table> -->
           <div style="display: flex; justify-content: center; gap: 20px">
             <div
               style="display: flex; flex-direction: column; text-align: left"
@@ -653,7 +715,7 @@
           </div>
         </form>
       </div>
-    </div>
+    </div> -->
 
     <!-- <div id="footbars"></div>
     <div
@@ -664,6 +726,57 @@
         opacity: 0.6;
       "
     ></div> -->
+
+    <div class="contact-us">
+      <div class="contact-us-inner">
+        <h4>Contact Us</h4>
+        <p>For prayer and counselling</p>
+        <form class="form" action="">
+          <div class="name">
+            <label for="">Name</label>
+            <input type="text" placeholder="Enter your name" />
+          </div>
+          <div class="email">
+            <label for="">Email</label>
+            <input type="text" placeholder="Enter your email" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" class="form-control" />
+          </div>
+          <div class="message">
+            <label for="">Message</label>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+          </div>
+          <div class="policy">
+            <label for="">
+              <input type="checkbox" />
+              <span>
+                You agree to our friendly <a href="">privacy policy</a>
+              </span>
+            </label>
+          </div>
+          <input class="submit" type="submit" name="submit" />
+        </form>
+      </div>
+      <div class="contact-us-inner1">
+        <h3>Get Directions</h3>
+        <div class="buses">
+          <h4>London Buses</h4>
+          <p>95, 483, 487</p>
+        </div>
+        <div class="trains">
+          <h4>Trains/tube</h4>
+          <p>Central Line: Hanger Lane</p>
+          <p>Station Picadily Line: Alperton Station</p>
+        </div>
+        <div class="driving">
+          <h4>Driving</h4>
+          <p>Via A40/A406</p>
+          <p>Hanger Lane Gyratory</p>
+        </div>
+      </div>
+    </div>
 
     <!--  -->
     <footer class="footer">
@@ -717,5 +830,53 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"></script>
+
+    <script>
+      function showHideNav(sidenav) {
+        document.getElementById(sidenav);
+        if (sidenav.style.display == "block") {
+          sidenav.style.display = "none";
+        } else {
+          sidenav.style.display = "block";
+        }
+      }
+
+      function hidenav(sidenav) {
+        document.getElementById(sidenav);
+        if (sidenav.style.display == "block") {
+          sidenav.style.display = "none";
+        }
+      }
+
+      $(document).ready(function () {
+        $("#bot1").click(function () {
+          $("#nav").show(200);
+        });
+      });
+
+      var input = document.querySelector("#phone");
+
+      var iti = window.intlTelInput(input, {
+        utilsScript:
+          "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+      });
+
+      function submitForm() {
+        // Retrieve the selected country code and phone number
+        const selectedCountry = iti.getSelectedCountryData().iso2;
+        const phoneNumber = iti.getNumber();
+
+        // You can perform further validation or send the data to a server
+        // This is a basic example, and you may need to customize it based on your requirements
+
+        // For demonstration purposes, we'll log the values to the console
+        console.log("Selected Country:", selectedCountry);
+        console.log("Phone Number:", phoneNumber);
+      }
+    </script>
   </body>
 </html>

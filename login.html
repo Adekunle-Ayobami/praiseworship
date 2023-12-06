@@ -233,6 +233,19 @@
       #ab {
         color: black;
       }
+
+      /*  */
+      .password {
+        position: relative;
+      }
+
+      #password-eye {
+        position: absolute;
+        top: 50%;
+        right: 1em;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
     </style>
 
     <script>
@@ -274,6 +287,15 @@
         });
         $("#hide").click(function () {
           $("#accord").hide(500);
+        });
+      });
+
+      $(document).ready(function () {
+        $("#password-eye").click(function () {
+          const passwordInput = $("#password");
+          const type =
+            passwordInput.attr("type") === "password" ? "text" : "password";
+          passwordInput.attr("type", type);
         });
       });
     </script>
@@ -380,7 +402,7 @@
           <a id="ab" class="dropb" href="contactus.html">Contact Us</a>
         </div>
         <div class="drop">
-          <a id="ab" class="dropb" href="#">Media Center</a>
+          <a id="ab" class="dropb" href="./watch-link.html">Media Center</a>
         </div>
         <div class="drop">
           <a id="ab" class="dropb" href="./login.html">Login</a>
@@ -392,11 +414,23 @@
       <form action="">
         <div class="login-mail">
           <label for="">Email Address</label>
-          <input type="text" placeholder="Enter email address" />
+          <input
+            type="text"
+            placeholder="Enter email address"
+            autocomplete="off"
+          />
         </div>
         <div class="login-password">
           <label for="">Password</label>
-          <input type="text" placeholder="Enter your password" />
+          <div class="password">
+            <input
+              id="password"
+              type="password"
+              placeholder="Enter your password"
+              autocomplete="current-password"
+            />
+            <i class="fa fa-eye" id="password-eye" aria-hidden="true"></i>
+          </div>
         </div>
         <div class="login-check">
           <input type="checkbox" />
