@@ -51,7 +51,12 @@
         font-size: 75.5%;
         margin: 0;
         padding: 0;
-        background: #ebebeb;
+        /* background: #ebebeb; */
+        background-image: url("resources/images/praise_tabs_20\ 1.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
         font-family: "Clash Grotesk", sans-serif;
       }
 
@@ -67,11 +72,6 @@
       }
 
       #total {
-        background-image: url("resources/images/praise_tabs_20\ 1.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
         margin-top: -10px;
         width: 100%;
         height: 500px;
@@ -169,9 +169,8 @@
         width: 30%;
         margin-left: 25%;
         margin-right: 60%;
-        margin-top: 200px;
-        opacity: 0.7;
-
+        margin-top: 150px;
+        /* opacity: 0.7; */
         height: 200px;
       }
 
@@ -212,22 +211,26 @@
         display: flex;
         justify-content: center;
         gap: 11em;
+        margin-top: -10em;
         padding-top: 5em;
         padding-bottom: 5em;
-        background-color: #fff;
+        /* background-color: #fff; */
       }
       .contact-us-inner h4 {
-        color: #091e42;
+        /* color: #091e42; */
+        color: white;
         font-size: 40px;
         font-weight: 600;
       }
       .contact-us-inner p {
-        color: #667085;
+        /* color: #667085; */
+        color: white;
         font-size: 16px;
         margin-top: em;
       }
       .contact-us-inner1 h3 {
-        color: #000;
+        /* color: #000; */
+        color: white;
         font-size: 40px;
         font-weight: 600;
       }
@@ -248,7 +251,8 @@
       .form-group,
       .message label {
         font-size: 18px;
-        color: #091e42;
+        /* color: #091e42; */
+        color: white;
       }
       .name input,
       .email input {
@@ -265,6 +269,9 @@
         border: 1px solid #d0d5dd;
         background-color: #fff;
       }
+      #phone {
+        color: black;
+      }
       .message textarea {
         border: 1px solid #d0d5dd;
         background-color: #fff;
@@ -280,6 +287,7 @@
       .policy span {
         position: relative;
         top: -1.2em;
+        color: white;
       }
       .form .submit {
         border-radius: 5px;
@@ -294,21 +302,27 @@
       }
       .buses h4 {
         font-size: 36px;
+        color: white;
       }
       .buses p {
         font-size: 16px;
+        color: white;
       }
       .trains h4 {
         font-size: 36px;
+        color: white;
       }
       .trains p {
         font-size: 16px;
+        color: white;
       }
       .driving h4 {
         font-size: 36px;
+        color: white;
       }
       .driving p {
         font-size: 16px;
+        color: white;
       }
 
       /* Footer */
@@ -481,11 +495,12 @@
             <a id="ab" class="dropb" href="index.html">Home </a>
           </div> -->
           <div class="drop">
-            <a id="ab" class="dropb" href="./who-we-are.html">Who We Are </a>
+            <a id="ab" class="dropb" href="#">Who We Are </a>
 
             <div class="dropdown-content">
-              <!-- color: black; background-color: white; height: 40px; width: 200px;" /-->
+              <!--input type="button" value="Ministers" onclick="showHideNav(nav); event.setPropagation();" style="border: none; color: black; background-color: white; height: 40px; width: 200px;" /-->
               <!-- <a href="Milestones.html">Ministers</a> -->
+              <a href="who-we-are.html">Ministers</a>
               <a href="ministries.html">Ministries</a>
               <a href="statement-of-faith.html">Statement Of Faith</a>
             </div>
@@ -859,11 +874,16 @@
       });
 
       var input = document.querySelector("#phone");
-
       var iti = window.intlTelInput(input, {
         utilsScript:
           "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
       });
+
+      // Retrieve the input container created by intlTelInput
+      var inputContainer = input.parentElement;
+
+      // Set the text color to black on the input container
+      inputContainer.style.color = "black";
 
       function submitForm() {
         // Retrieve the selected country code and phone number
