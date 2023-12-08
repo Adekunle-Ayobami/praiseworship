@@ -277,6 +277,7 @@
         background-color: #fff;
         outline: none;
         border-radius: 8px;
+        padding: 7px 8px;
       }
       .policy {
         display: flex;
@@ -749,19 +750,25 @@
         <form class="form" action="">
           <div class="name">
             <label for="">Name</label>
-            <input type="text" placeholder="Enter your name" />
+            <input type="text" placeholder="Enter your name" required />
           </div>
           <div class="email">
             <label for="">Email</label>
-            <input type="text" placeholder="Enter your email" />
+            <input type="text" placeholder="Enter your email" required />
           </div>
           <div class="form-group">
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" class="form-control" />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              class="form-control"
+              required
+            />
           </div>
           <div class="message">
             <label for="">Message</label>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <textarea name="" id="" cols="30" rows="10" required></textarea>
           </div>
           <div class="policy">
             <label for="">
@@ -877,23 +884,17 @@
       var iti = window.intlTelInput(input, {
         utilsScript:
           "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        nationalMode: false, // Set nationalMode to false
+        allowDropdown: true,
       });
 
-      // Retrieve the input container created by intlTelInput
       var inputContainer = input.parentElement;
-
-      // Set the text color to black on the input container
       inputContainer.style.color = "black";
 
       function submitForm() {
-        // Retrieve the selected country code and phone number
         const selectedCountry = iti.getSelectedCountryData().iso2;
         const phoneNumber = iti.getNumber();
 
-        // You can perform further validation or send the data to a server
-        // This is a basic example, and you may need to customize it based on your requirements
-
-        // For demonstration purposes, we'll log the values to the console
         console.log("Selected Country:", selectedCountry);
         console.log("Phone Number:", phoneNumber);
       }
